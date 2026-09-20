@@ -3,133 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>שירים · Hebrew lyrics with Spotify</title>
+<title>Shiralong · Hebrew lyrics, live</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #131627;
-    --bg-2: #1b1f33;
-    --ink: #ece7db;
-    --dim: #4f5570;
-    --green: #5fd38d;
-    --green-deep: #2f9c5f;
-    --line: #2a2f47;
-    --font: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif;
+    --bg: #f5f5f7;
+    --surface: rgba(255,255,255,.72);
+    --card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-2: #6e6e73;
+    --dim: #b8b8bd;
+    --green: #30b45a;
+    --green-soft: rgba(48,180,90,.12);
+    --line: rgba(0,0,0,.08);
+    --field: #ffffff;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+    --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-he: 'Heebo', -apple-system, BlinkMacSystemFont, 'SF Hebrew', 'Segoe UI', Arial, sans-serif;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #000000; --surface: rgba(20,20,22,.72); --card: #1c1c1e;
+      --ink: #f5f5f7; --ink-2: #98989d; --dim: #48484a;
+      --green: #32d74b; --green-soft: rgba(50,215,75,.14);
+      --line: rgba(255,255,255,.10); --field: #2c2c2e;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
   *, *::before, *::after { box-sizing: inherit; }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
   html, body { height: 100%; margin: 0; }
   body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font);
-    font-weight: 300;
-    line-height: 1.4;
-    display: flex;
-    flex-direction: column;
+    background: var(--bg); color: var(--ink);
+    font-family: var(--font-en); font-weight: 400; line-height: 1.45;
+    -webkit-font-smoothing: antialiased; letter-spacing: -.005em;
+    display: flex; flex-direction: column;
   }
-  button, input, textarea { font: inherit; color: inherit; }
-  button { cursor: pointer; }
-  button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .85em; background: var(--green-soft); color: var(--ink); padding: .1rem .4rem; border-radius: 6px; word-break: break-all; }
 
-  /* Top bar */
+  /* Top bar — frosted */
   header {
-    display: flex; align-items: center; gap: .75rem;
-    padding: .75rem 1rem;
+    display: flex; align-items: center; gap: .6rem;
+    padding: .7rem 1.1rem;
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--surface);
+    -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid var(--line);
-    position: sticky; top: env(safe-area-inset-top, 0px);
-    background: var(--bg); z-index: 5;
   }
   header .now { flex: 1; min-width: 0; }
-  header .now .title { font-size: 1.05rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  header .now .artist { font-size: .85rem; color: var(--dim); }
+  header .now .title { font-size: .95rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -.01em; }
+  header .now .artist { font-size: .8rem; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .iconbtn {
-    background: none; border: 1px solid var(--line); border-radius: 999px;
-    padding: .35rem .8rem; font-size: .85rem; color: var(--ink);
+    background: transparent; border: none; border-radius: 999px;
+    padding: .4rem .75rem; font-size: .85rem; font-weight: 500; color: var(--ink-2);
+    transition: background .15s, color .15s;
   }
-  .iconbtn:hover { border-color: var(--green-deep); }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dim); flex: none; }
-  .dot.on { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .iconbtn:hover { background: var(--green-soft); color: var(--ink); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dim); flex: none; transition: background .3s; }
+  .dot.on { background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+  @media (max-width: 480px) { .iconbtn { padding: .4rem .5rem; font-size: .8rem; } }
 
   /* Lyrics stage */
   main { flex: 1; overflow-y: auto; scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { main { scroll-behavior: auto; } }
-  .stage { max-width: 44rem; margin: 0 auto; padding: 40vh 1.25rem 45vh; }
-  .line { margin: 0 0 1.9rem; text-align: center; transition: opacity .3s, color .25s; color: var(--dim); }
+  .stage { max-width: 40rem; margin: 0 auto; padding: 38vh 1.5rem 45vh; }
+  .line { margin: 0 0 2rem; text-align: center; color: var(--dim); transition: color .35s ease, opacity .35s ease, transform .35s ease; transform: scale(.96); transform-origin: center; }
   .line .he {
-    display: inline-block; direction: rtl; unicode-bidi: isolate;
-    font-size: 1.8rem; font-weight: 500; line-height: 1.35;
+    display: block; direction: rtl; unicode-bidi: isolate;
+    font-family: var(--font-he); font-size: 1.7rem; font-weight: 600; line-height: 1.35; letter-spacing: -.01em;
   }
-  .line .en { display: block; margin-top: .2rem; font-size: 1.05rem; font-weight: 300; }
-  .line.current, .line.done { color: var(--green); }
-  .line.current .he { font-size: 2.3rem; }
-  .line.current .en { font-size: 1.25rem; }
-  .line.done { opacity: .55; }
-  .line.upcoming { opacity: .7; }
+  .line .en { display: block; margin-top: .3rem; font-size: 1rem; font-weight: 400; color: inherit; opacity: .85; }
+  .line.current { color: var(--green); transform: scale(1); }
+  .line.current .he { font-size: 2.2rem; }
+  .line.current .en { font-size: 1.15rem; opacity: 1; }
+  .line.done { color: var(--green); opacity: .55; }
+  .line.upcoming { opacity: .8; }
+  .stage.static { padding-top: 2.5rem; padding-bottom: 6rem; }
+  .stage.static .line { color: var(--ink); opacity: 1; transform: none; margin-bottom: 1.6rem; }
+  .stage.static .line .en { color: var(--ink-2); }
   @media (max-width: 480px) {
-    .line .he { font-size: 1.5rem; }
-    .line.current .he { font-size: 1.9rem; }
+    .line .he { font-size: 1.45rem; }
+    .line.current .he { font-size: 1.85rem; }
   }
 
-  /* Empty / message states */
-  .msg { max-width: 30rem; margin: 20vh auto 0; padding: 0 1.5rem; text-align: center; }
-  .msg h1 { font-weight: 400; font-size: 2rem; margin: 0 0 .6rem; }
-  .msg p { color: #a6a9bb; margin: .4rem 0; }
-  .msg code { font-family: ui-monospace, Menlo, monospace; font-size: .85rem; background: var(--bg-2); padding: .15rem .4rem; border-radius: 4px; word-break: break-all; }
+  /* Message cards */
+  .msg { max-width: 30rem; margin: 14vh auto 3rem; padding: 2rem 1.75rem; text-align: center; background: var(--card); border-radius: 22px; box-shadow: var(--shadow); }
+  .msg h1 { font-weight: 700; font-size: 1.9rem; letter-spacing: -.03em; margin: 0 0 .5rem; }
+  .msg p { color: var(--ink-2); margin: .4rem 0; font-size: .95rem; }
+  #settings .msg { text-align: left; }
+  #settings .msg h1 { font-size: 1.5rem; }
   .primary {
-    background: var(--green); color: #0d2417; border: none; border-radius: 999px;
-    padding: .6rem 1.3rem; font-weight: 500; margin-top: 1rem;
+    background: var(--green); color: #fff; border: none; border-radius: 999px;
+    padding: .7rem 1.4rem; font-weight: 600; font-size: .95rem; margin-top: 1rem;
+    transition: transform .12s, filter .15s;
   }
-  .primary:hover { background: #79e0a2; }
-  .ghost { background: none; border: 1px solid var(--line); color: var(--ink); border-radius: 999px; padding: .5rem 1.1rem; margin-top: .6rem; }
-  .field { margin: 1rem auto 0; text-align: left; }
-  .field label { display: block; font-size: .85rem; color: #a6a9bb; margin-bottom: .3rem; }
-  .field select { width: 100%; background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: .55rem .7rem; color: var(--ink); }
-  .field input[type="checkbox"] { width: auto; margin-right: .4rem; }
-  .field input, .field textarea {
-    width: 100%; background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px;
-    padding: .55rem .7rem; color: var(--ink);
+  .primary:hover { filter: brightness(1.06); }
+  .primary:active { transform: scale(.97); }
+  .ghost { background: var(--green-soft); border: none; color: var(--green); border-radius: 999px; padding: .55rem 1.1rem; font-weight: 500; font-size: .9rem; margin-top: .6rem; transition: filter .15s; }
+  .ghost:hover { filter: brightness(.95); }
+  .field { margin: 1rem 0 0; text-align: left; }
+  .field label { display: block; font-size: .8rem; font-weight: 500; color: var(--ink-2); margin-bottom: .35rem; }
+  .field input, .field textarea, .field select {
+    width: 100%; background: var(--field); border: 1px solid var(--line); border-radius: 12px;
+    padding: .65rem .8rem; color: var(--ink); transition: border-color .15s, box-shadow .15s;
   }
-  .field textarea { min-height: 9rem; resize: vertical; line-height: 1.5; }
-  .field textarea.he { direction: rtl; font-size: 1.1rem; }
+  .field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+  .field input[type="checkbox"] { width: auto; margin-right: .5rem; accent-color: var(--green); }
+  .field textarea { min-height: 9rem; resize: vertical; line-height: 1.55; }
+  .field textarea.he { direction: rtl; font-family: var(--font-he); font-size: 1.05rem; }
 
-  /* Bottom controls */
+  /* Bottom bar */
   footer {
     border-top: 1px solid var(--line);
-    padding: .6rem 1rem;
-    padding-bottom: calc(.6rem + env(safe-area-inset-bottom, 0px));
-    display: flex; align-items: center; gap: .6rem; font-size: .85rem; color: #a6a9bb;
-    background: var(--bg);
+    padding: .6rem 1.1rem; padding-bottom: calc(.6rem + env(safe-area-inset-bottom, 0px));
+    display: flex; align-items: center; gap: .75rem; font-size: .82rem; color: var(--ink-2);
+    background: var(--surface);
+    -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
   }
-  footer .time { font-variant-numeric: tabular-nums; min-width: 4.5rem; }
+  footer .iconbtn { background: var(--green-soft); color: var(--green); font-weight: 600; min-width: 4.2rem; }
+  footer .time { font-variant-numeric: tabular-nums; min-width: 3rem; color: var(--ink); font-weight: 500; }
   footer .spacer { flex: 1; }
+  footer #status { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-  /* Sync editor */
-  .editor { max-width: 44rem; margin: 0 auto; padding: 1.5rem 1.25rem 6rem; }
-  .editor h1 { font-weight: 400; font-size: 1.7rem; margin: 0 0 .3rem; }
-  .editor p { color: #a6a9bb; margin: .3rem 0 1rem; }
+  /* Editor & playlist pages */
+  .editor { max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 7rem; }
+  .editor h1 { font-weight: 700; font-size: 1.9rem; letter-spacing: -.03em; margin: 0 0 .3rem; }
+  .editor p { color: var(--ink-2); margin: .3rem 0 1rem; font-size: .95rem; }
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   @media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
-  .tap-list { list-style: none; padding: 0; margin: 1rem 0; }
-  .tap-list li { display: grid; grid-template-columns: 4.5rem 1fr; gap: .8rem; padding: .5rem .6rem; border-radius: 8px; align-items: baseline; }
-  .tap-list li.next { background: var(--bg-2); }
+  .tap-list { list-style: none; padding: 0; margin: 1.2rem 0; background: var(--card); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+  .tap-list:empty { display: none; }
+  .tap-list li { display: grid; grid-template-columns: 3.8rem 1fr; gap: .8rem; padding: .7rem 1rem; align-items: baseline; border-bottom: 1px solid var(--line); }
+  .tap-list li:last-child { border-bottom: none; }
+  .tap-list li.next { background: var(--green-soft); }
   .tap-list li.stamped .t { color: var(--green); }
-  .tap-list .t { font-variant-numeric: tabular-nums; color: var(--dim); }
-  .tap-list .he { direction: rtl; text-align: right; font-size: 1.1rem; }
-  .tap-list .en { color: #a6a9bb; font-size: .9rem; }
+  .tap-list .t { font-variant-numeric: tabular-nums; color: var(--dim); font-size: .85rem; }
+  .tap-list .he { direction: rtl; text-align: right; font-family: var(--font-he); font-size: 1.05rem; font-weight: 500; }
+  .tap-list .en { color: var(--ink-2); font-size: .88rem; }
   .tapbtn {
     position: fixed; left: 50%; transform: translateX(-50%);
     bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
-    background: var(--green); color: #0d2417; border: none; border-radius: 999px;
-    padding: 1rem 2.2rem; font-size: 1.1rem; font-weight: 500; box-shadow: 0 6px 24px rgba(0,0,0,.4);
+    background: var(--green); color: #fff; border: none; border-radius: 999px;
+    padding: 1rem 2.4rem; font-size: 1.1rem; font-weight: 600; box-shadow: 0 10px 30px rgba(48,180,90,.35);
   }
   .tapbtn:active { transform: translateX(-50%) scale(.96); }
-  pre.out { background: var(--bg-2); padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: .8rem; white-space: pre; }
+  pre.out { background: var(--card); box-shadow: var(--shadow); padding: 1rem; border-radius: 12px; overflow-x: auto; font-size: .78rem; white-space: pre; }
   .hidden { display: none !important; }
 </style>
 </head>
@@ -276,7 +302,7 @@
 
   // ---------- Config ----------
   // Your Spotify app's Client ID (public, not a secret). Visitors then just press "Connect Spotify".
-  const SPOTIFY_CLIENT_ID = 'd58683844d184f28b8a30607f2f76fe2';
+  const SPOTIFY_CLIENT_ID = 'PASTE_YOUR_CLIENT_ID_HERE';
   const SCOPES = 'user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-read-private user-library-read';
   const REDIRECT = location.origin + location.pathname;
   const LS = {
@@ -309,6 +335,7 @@
   let fetchedAt = 0;         // performance.now()
   let currentSong = null;    // song for the current track
   let lineEls = [];
+  let isStatic = false;
   let lastCurrentIdx = -1;
   let demoTimer = null;
 
@@ -484,11 +511,11 @@
       if (!found || !found.lines.length) { say('Lyrics not found online — press "Add and sync by hand", then use the Shironet or Genius buttons to find and paste them'); LS.set('nolyrics_' + tr.id, '1'); return; }
       say(`Translating ${found.lines.length} lines…`);
       const en = await translateLines(found.lines.map(l => l.he));
-      const lines = found.lines.map((l, i) => ({ ...(l.t != null ? { t: l.t } : { t: i * 4 }), he: l.he, en: en[i] }));
+      const lines = found.lines.map((l, i) => ({ ...(l.t != null ? { t: l.t } : {}), he: l.he, en: en[i] }));
       const entry = { title: tr.title, artist: tr.artist, lines, source: found.synced ? 'lrclib-synced' : 'lrclib-untimed' };
       songs[tr.id] = entry;
       cacheWrite(tr.id, entry);
-      say(found.synced ? 'Lyrics ready' : 'Lyrics found but without timings — use Sync lyrics to tap them');
+      say(found.synced ? 'Lyrics ready' : 'Lyrics ready (no timings, scroll by hand)');
       if (track && track.id === tr.id) renderForTrack();
     } catch (e) {
       say('Automatic lyrics failed: ' + e.message);
@@ -625,7 +652,7 @@
       const hasToken = !!LS.get('sp_access');
       message(hasToken
         ? '<h1>Nothing playing</h1><p>Play a song in any Spotify app on this account and the lyrics will appear here.</p>'
-        : '<h1>שירים</h1><p>Hebrew lyrics with an English translation, filling in green as the song plays.</p><button class="primary" id="msgConnect">Connect Spotify</button><br><button class="ghost" id="msgDemo">Try a demo without Spotify</button>');
+        : '<h1>Shiralong</h1><p>Hebrew lyrics with English translation, live with whatever is playing on Spotify.</p><button class="primary" id="msgConnect">Connect Spotify</button><br><button class="ghost" id="msgDemo">Try a demo without Spotify</button>');
       const c = $('msgConnect'); if (c) c.onclick = () => show('settings');
       const d = $('msgDemo'); if (d) d.onclick = startDemo;
       return;
@@ -642,9 +669,11 @@
       if (!demoTimer && el2.autoFetch.checked && !LS.get('nolyrics_' + track.id)) autoFetch(track, $('msgStatus'));
       return;
     }
+    isStatic = currentSong.source === 'lrclib-untimed' || !currentSong.lines.some(l => l.t != null);
+    el.stage.classList.toggle('static', isStatic);
     for (const ln of currentSong.lines) {
       const d = document.createElement('div');
-      d.className = 'line upcoming';
+      d.className = isStatic ? 'line' : 'line upcoming';
       d.innerHTML = `<span class="he">${escapeHtml(ln.he || '')}</span><span class="en">${escapeHtml(ln.en || '')}</span>`;
       el.stage.appendChild(d);
       lineEls.push(d);
@@ -656,7 +685,7 @@
     requestAnimationFrame(frame);
     const ms = nowMs();
     el.timeNow.textContent = fmt(ms);
-    if (!currentSong || !lineEls.length) return;
+    if (!currentSong || !lineEls.length || isStatic) return;
     const t = (ms - offsetMs()) / 1000;
     const lines = currentSong.lines;
     let idx = -1;
@@ -860,7 +889,7 @@
           try { en = await translateLines(res.lines.map(l => l.he)); break; }
           catch (e) { if (attempt < 3 && /429|rate|overloaded|529/i.test(e.message)) { await sleep(15000 * (attempt + 1)); continue; } throw e; }
         }
-        const lines = res.lines.map((l, i) => ({ t: l.t != null ? l.t : i * 4, he: l.he, en: en[i] }));
+        const lines = res.lines.map((l, i) => ({ ...(l.t != null ? { t: l.t } : {}), he: l.he, en: en[i] }));
         const entry = { title: tr.title, artist: tr.artist, lines, source: res.synced ? 'lrclib-synced' : 'lrclib-untimed' };
         songs[tr.id] = entry; cacheWrite(tr.id, entry); LS.del('nolyrics_' + tr.id);
         found++;
