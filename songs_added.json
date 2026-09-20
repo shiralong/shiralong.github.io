@@ -532,124 +532,151 @@
     ],
     "source": "manual-untimed"
   },
-      "2z4ZInnLkxQNN0KBTq4cKk": {
+  "2z4ZInnLkxQNN0KBTq4cKk": {
     "title": "שמחה",
     "artist": "Ben Zur",
     "lines": [
       {
+        "t": 4.638,
         "he": "מי שטעם קצת מהיין",
         "en": "Whoever has tasted a little of the wine"
       },
       {
+        "t": 8.688,
         "he": "יודע כמה שהוא טוב",
         "en": "Knows just how good it is"
       },
       {
+        "t": 14.653,
         "he": "הוא לא יפול שוב פעמיים",
         "en": "Will not fall twice"
       },
       {
+        "t": 18.911,
         "he": "ליין זול",
         "en": "For cheap wine"
       },
       {
+        "t": 24.959,
         "he": "מי שטעם קצת מהיין",
         "en": "Whoever has tasted a little of the wine"
       },
       {
+        "t": 29.043,
         "he": "יצא ממנו סוד",
         "en": "Let a secret slip"
       },
       {
+        "t": 34.652,
         "he": "הוא לא יכול להיגמל",
         "en": "Can no longer quit"
       },
       {
+        "t": 38.769,
         "he": "שותה עצות",
         "en": "Drinking in counsel"
       },
       {
+        "t": 44.331,
         "he": "יש אמת אחת אלוהים אחד",
         "en": "There is one truth, one God"
       },
       {
+        "t": 47.1,
         "he": "קשה לטעות מסנוור לראות",
         "en": "Hard to mistake, dazzling to behold"
       },
       {
+        "t": 49.31,
         "he": "וכבר היינו שם נפתח הים",
         "en": "And we have been there before—the sea parted"
       },
       {
+        "t": 52.282,
         "he": "בתוך האותיות אני לומד לשחות",
         "en": "Within the letters I am learning to swim"
       },
       {
+        "t": 55.031,
         "he": "וגם אני בסוף שתיתי",
         "en": "And in the end, I drank too"
       },
       {
+        "t": 56.901,
         "he": "מהכוס ראיתי אור",
         "en": "From the cup, I saw light"
       },
       {
+        "t": 65.029,
         "he": "הסתובבתי כמו שיכור",
         "en": "I wandered around like a drunk"
       },
       {
+        "t": 68.723,
         "he": "ממך שנים צמא לעוד",
         "en": "For years, I have thirsted for more of you"
       },
       {
+        "t": 75.194,
         "he": "רבינו כבר דיבר על זה מזמן",
         "en": "Our Rabbi spoke of this long ago"
       },
       {
+        "t": 78.647,
         "he": "בסיפורי מעשיות",
         "en": "In his Tales"
       },
       {
+        "t": 85.11,
         "he": "כל מה שצריך הבן אדם",
         "en": "All a person needs"
       },
       {
+        "t": 88.925,
         "he": "זה רק לשתות",
         "en": "Is simply to drink"
       },
       {
+        "t": 95.519,
         "he": "הם יחפשו אותו בדרך",
         "en": "They will seek him along the way"
       },
       {
+        "t": 98.644,
         "he": "יותר ממה שהוא חלם",
         "en": "More than he ever dreamed"
       },
       {
+        "t": 104.542,
         "he": "לא יתפתה לאף סוחר",
         "en": "He will not be tempted by any merchant"
       },
       {
+        "t": 108.811,
         "he": "בעד כל הון שבעולם",
         "en": "For all the wealth in the world"
       },
       {
+        "t": 114.805,
         "he": "ולא כולם זוכים לשבת",
         "en": "And not everyone is privileged to sit"
       },
       {
+        "t": 118.776,
         "he": "בשולחנות של מלכים",
         "en": "At the tables of kings"
       },
       {
+        "t": 124.99,
         "he": "מרגישים את זה בבטן",
         "en": "They feel it in their gut"
       },
       {
+        "t": 128.878,
         "he": "צועקים את זה בפנים",
         "en": "They shout it to your face"
       }
-    ],
-    "source": "manual-untimed"
+    ]
   }
 
 }
