@@ -156,6 +156,8 @@
   }
   .tapbtn:active { transform: translateX(-50%) scale(.96); }
   pre.out { background: var(--card); box-shadow: var(--shadow); padding: 1rem; border-radius: 12px; overflow-x: auto; font-size: .78rem; white-space: pre; }
+  .static-bar { display: flex; align-items: center; justify-content: center; gap: .8rem; margin: 0 0 1.5rem; font-size: .85rem; color: var(--ink-2); }
+  .static-bar .ghost { margin: 0; }
   .hidden { display: none !important; }
 </style>
 </head>
@@ -303,7 +305,7 @@
 
   // ---------- Config ----------
   // Your Spotify app's Client ID (public, not a secret). Visitors then just press "Connect Spotify".
-  const SPOTIFY_CLIENT_ID = 'd58683844d184f28b8a30607f2f76fe2';
+  const SPOTIFY_CLIENT_ID = 'PASTE_YOUR_CLIENT_ID_HERE';
   const SCOPES = 'user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-read-private user-library-read';
   const REDIRECT = location.origin + location.pathname;
   const LS = {
@@ -672,6 +674,16 @@
     }
     isStatic = /untimed$/.test(currentSong.source || '') || !currentSong.lines.some(l => l.t != null);
     el.stage.classList.toggle('static', isStatic);
+    if (isStatic) {
+      const bar = document.createElement('div');
+      bar.className = 'static-bar';
+      bar.innerHTML = '<span>Lyrics without timings</span><button class="ghost" id="btnAddTimes">Add timings</button>';
+      el.stage.appendChild(bar);
+      bar.querySelector('#btnAddTimes').onclick = () => {
+        openEditor(true); tapping = false; tapIdx = 0; tapTimes = []; renderTapList(); show('editor');
+        el2.edStatus.textContent = 'Restart the song, press "Start tapping", then tap Now at the start of each line.';
+      };
+    }
     for (const ln of currentSong.lines) {
       const d = document.createElement('div');
       d.className = isStatic ? 'line' : 'line upcoming';
@@ -718,13 +730,13 @@
 
   // ---------- Sync editor ----------
   let tapping = false, tapIdx = 0, tapTimes = [];
-  function openEditor() {
+  function openEditor(force = false) {
     if (track && !demoTimer) {
       el.edTrack.value = track.id;
-      if (!el.edTitle.value) el.edTitle.value = track.title;
-      if (!el.edArtist.value) el.edArtist.value = track.artist;
+      if (!el.edTitle.value || force) el.edTitle.value = track.title;
+      if (!el.edArtist.value || force) el.edArtist.value = track.artist;
       const existing = songs[track.id];
-      if (existing && !el.edHe.value) {
+      if (existing && (!el.edHe.value || force)) {
         el.edHe.value = existing.lines.map(l => l.he).join('\n');
         el.edEn.value = existing.lines.map(l => l.en).join('\n');
       }
