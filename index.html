@@ -266,6 +266,7 @@
       <button class="ghost" id="btnGenius">Search Genius</button>
       <button class="ghost" id="btnTranslate">Translate to English</button>
       <button class="ghost hidden" id="btnUseTimes">Use fetched timings</button>
+      <button class="ghost" id="btnSaveUntimed">Save without timings</button>
       <span id="edStatus" style="color:#a6a9bb;font-size:.9rem;margin-left:.5rem"></span>
       <div class="cols">
         <div class="field"><label for="edHe">Hebrew</label><textarea id="edHe" class="he"></textarea></div>
@@ -280,7 +281,7 @@
       <button class="ghost" id="btnBack2">Back to lyrics</button>
       <ol class="tap-list" id="tapList"></ol>
       <div id="outWrap" class="hidden">
-        <p>Saved in this browser. To keep it across devices, add this entry to <code>songs.json</code> in your repo:</p>
+        <p>Saved in this browser. To keep it across devices, add this entry to <code>songs_added.json</code> in your repo (inside the outer braces, comma-separated from the previous entry):</p>
         <pre class="out" id="out"></pre>
         <button class="ghost" id="btnCopy">Copy JSON</button>
       </div>
@@ -302,7 +303,7 @@
 
   // ---------- Config ----------
   // Your Spotify app's Client ID (public, not a secret). Visitors then just press "Connect Spotify".
-  const SPOTIFY_CLIENT_ID = 'd58683844d184f28b8a30607f2f76fe2';
+  const SPOTIFY_CLIENT_ID = 'PASTE_YOUR_CLIENT_ID_HERE';
   const SCOPES = 'user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-read-private user-library-read';
   const REDIRECT = location.origin + location.pathname;
   const LS = {
@@ -360,15 +361,15 @@
 
   // ---------- Lyrics data ----------
   async function loadSongs() {
-    try {
-      const r = await fetch('songs.json', { cache: 'no-store' });
-      if (!r.ok) throw new Error(r.status);
-      songs = await r.json();
-    } catch (e) {
-      songs = {};
-      el.status.textContent = 'Could not load songs.json';
+    songs = {};
+    for (const file of ['songs.json', 'songs_added.json']) {   // hand-added file wins over the batch file
+      try {
+        const r = await fetch(file, { cache: 'no-store' });
+        if (r.ok) Object.assign(songs, await r.json());
+        else if (file === 'songs.json') el.status.textContent = 'Could not load songs.json';
+      } catch (e) { if (file === 'songs.json') el.status.textContent = 'Could not load songs.json'; }
     }
-    Object.assign(songs, cacheRead());   // songs fetched in this browser win over the repo file
+    Object.assign(songs, cacheRead());   // songs fetched in this browser win over the repo files
   }
   function cacheRead() { try { return JSON.parse(LS.get('songs_cache', '{}')) || {}; } catch { return {}; } }
   let storageWarned = false;
@@ -669,7 +670,7 @@
       if (!demoTimer && el2.autoFetch.checked && !LS.get('nolyrics_' + track.id)) autoFetch(track, $('msgStatus'));
       return;
     }
-    isStatic = currentSong.source === 'lrclib-untimed' || !currentSong.lines.some(l => l.t != null);
+    isStatic = /untimed$/.test(currentSong.source || '') || !currentSong.lines.some(l => l.t != null);
     el.stage.classList.toggle('static', isStatic);
     for (const ln of currentSong.lines) {
       const d = document.createElement('div');
@@ -762,6 +763,18 @@
     renderTapList(); finishTap();
   };
   el.edHe.oninput = () => { fetchedTimes = null; el2.useTimes.classList.add('hidden'); };
+  $('btnSaveUntimed').onclick = () => {
+    if (!lines().length) { alert('Paste the Hebrew lines first.'); return; }
+    if (!el.edTrack.value.trim()) { alert('Fill in the Spotify track ID.'); return; }
+    tapping = false; el.tapNow.classList.add('hidden');
+    const id = el.edTrack.value.trim();
+    const entry = { title: el.edTitle.value.trim(), artist: el.edArtist.value.trim(), lines: lines(), source: 'manual-untimed' };
+    songs[id] = entry; cacheWrite(id, entry); LS.del('nolyrics_' + id);
+    if (track && track.id === id) renderForTrack();
+    el.out.textContent = JSON.stringify({ [id]: entry }, null, 2).replace(/^\{\n|\n\}$/g, '');
+    el.outWrap.classList.remove('hidden');
+    el.outWrap.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
 
   function lines() {
     const he = el.edHe.value.split('\n').map(s => s.trim()).filter(Boolean);
@@ -879,7 +892,7 @@
       done++;
       plProgress.textContent = `${done} / ${tracks.length} — ${tr.title} · ${tr.artist}`;
       const have = songs[tr.id];
-      if (have?.lines?.length) { skipped++; (have.source === 'lrclib-untimed' ? report.untimed : report.translated).push(label(tr)); continue; }
+      if (have?.lines?.length) { skipped++; (/untimed$/.test(have.source || '') ? report.untimed : report.translated).push(label(tr)); continue; }
       if (!retry && LS.get('nolyrics_' + tr.id)) { skipped++; report.notFound.push(label(tr)); continue; }
       try {
         const res = await fetchLrclib(tr);
