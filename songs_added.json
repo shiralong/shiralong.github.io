@@ -1,123 +1,4 @@
 {
-    "0lQuy8MelScHzlECVi7qPM": {
-    "title": "ליקוטי מוהר\"ן",
-    "artist": "Ben Zur",
-    "lines": [
-      {
-        "he": "וכל הלילה פה הבלאגן חגג",
-        "en": "And all night long, the chaos here ran wild"
-      },
-      {
-        "he": "קראנו ליקוטי מוהרן על איזה גג",
-        "en": "We read Likutei Moharan on some rooftop"
-      },
-      {
-        "he": "הייתי באורות נשבע לך בחיי",
-        "en": "I was on a high, I swear to you on my life"
-      },
-      {
-        "he": "את לא יודעת שמצאת חן בעייני",
-        "en": "You don't know that you found favor in my eyes"
-      },
-      {
-        "he": "לאט גרמת לי להבין שיש הבדל גדול",
-        "en": "Slowly, you made me understand there's a world of difference"
-      },
-      {
-        "he": "בין אהבה לתאווה זה מסוכן ליפול",
-        "en": "Between love and lust—it's dangerous to fall"
-      },
-      {
-        "he": "ויש דברים שאני כל כך מפחד לשאול",
-        "en": "And there are things I'm so afraid to ask"
-      },
-      {
-        "he": "אולי עדיף לא לדעת הכל",
-        "en": "Maybe it's better not to know everything"
-      },
-      {
-        "he": "בכל רחבי תבל חיפשתי רק אותך",
-        "en": "All across the world, I searched only for you"
-      },
-      {
-        "he": "ושער הדמעות נפתח",
-        "en": "And the Gate of Tears opened"
-      },
-      {
-        "he": "עם הזמן את תלמדי אותי",
-        "en": "In time, you'll teach me"
-      },
-      {
-        "he": "אני כמוך ומכאן תשארי איתי",
-        "en": "I'm like you, and from now on, stay with me"
-      },
-      {
-        "he": "הנצח גדול",
-        "en": "Eternity is vast"
-      },
-      {
-        "he": "אם לא את אז מי תבין אותי",
-        "en": "If not you, then who will understand me"
-      },
-      {
-        "he": "את כל השריטות",
-        "en": "All my scars"
-      },
-      {
-        "he": "מאמי שימי יד נזרוק את הפחד מכל המדרגות",
-        "en": "Baby, take my hand—we'll throw fear down every flight of stairs"
-      },
-      {
-        "he": "אם נספר את הסיפור מהתחלה",
-        "en": "If we tell the story from the beginning"
-      },
-      {
-        "he": "באתי לחפש אמת לא תהילה",
-        "en": "I came looking for truth, not glory"
-      },
-      {
-        "he": "רחוק בגוף אבל קרוב",
-        "en": "Far away in body, but close"
-      },
-      {
-        "he": "כשזה נכון אז זה מגיע בדיוק בזמן",
-        "en": "When it's right, it comes exactly on time"
-      },
-      {
-        "he": "חכה שיגיע סימן",
-        "en": "Wait for a sign to come"
-      },
-      {
-        "he": "חיבוק של נשמות אחר כך כל השאר",
-        "en": "An embrace of souls, and then everything else"
-      },
-      {
-        "he": "איתך העצב מאושר",
-        "en": "With you, sorrow is happy"
-      },
-      {
-        "he": "עם הזמן את תלמדי אותי",
-        "en": "In time, you'll teach me"
-      },
-      {
-        "he": "אני כמוך ומכאן תשארי איתי",
-        "en": "I'm like you, and from now on, stay with me"
-      },
-      {
-        "he": "הנצח גדול",
-        "en": "Eternity is vast"
-      },
-      {
-        "he": "אם לא את אז מי תבין אותי",
-        "en": "If not you, then who will understand me"
-      },
-      {
-        "he": "את כל השריטות",
-        "en": "All my scars"
-      }
-    ],
-    "source": "manual-untimed"
-  },
     "2yB5lp7BXtVbeTnUF97D44": {
     "title": "קרבחאל",
     "artist": "Ben Zur",
@@ -901,6 +782,152 @@
         "t": 150.486,
         "he": "הלב הזה כבר התעורר יותר הוא לא ישן",
         "en": "This heart has finally awakened; it no longer sleeps"
+      }
+    ]
+  },
+      "0lQuy8MelScHzlECVi7qPM": {
+    "title": "ליקוטי מוהר\"ן",
+    "artist": "Ben Zur",
+    "lines": [
+      {
+        "t": 8.409,
+        "he": "וכל הלילה פה הבלאגן חגג",
+        "en": "And all night long, the chaos here ran wild"
+      },
+      {
+        "t": 14.995,
+        "he": "קראנו ליקוטי מוהרן על איזה גג",
+        "en": "We read Likutei Moharan on some rooftop"
+      },
+      {
+        "t": 17.427,
+        "he": "הייתי באורות נשבע לך בחיי",
+        "en": "I was on a high, I swear to you on my life"
+      },
+      {
+        "t": 20.041,
+        "he": "את לא יודעת שמצאת חן בעייני",
+        "en": "You don't know that you found favor in my eyes"
+      },
+      {
+        "t": 22.39,
+        "he": "לאט גרמת לי להבין שיש הבדל גדול",
+        "en": "Slowly, you made me understand there's a world of difference"
+      },
+      {
+        "t": 24.808,
+        "he": "בין אהבה לתאווה זה מסוכן ליפול",
+        "en": "Between love and lust—it's dangerous to fall"
+      },
+      {
+        "t": 27.387,
+        "he": "ויש דברים שאני כל כך מפחד לשאול",
+        "en": "And there are things I'm so afraid to ask"
+      },
+      {
+        "t": 30.017,
+        "he": "אולי עדיף לא לדעת הכל",
+        "en": "Maybe it's better not to know everything"
+      },
+      {
+        "t": 32.294,
+        "he": "בכל רחבי תבל חיפשתי רק אותך",
+        "en": "All across the world, I searched only for you"
+      },
+      {
+        "t": 37.183,
+        "he": "ושער הדמעות נפתח",
+        "en": "And the Gate of Tears opened"
+      },
+      {
+        "t": 40.444,
+        "he": "עם הזמן את תלמדי אותי",
+        "en": "In time, you'll teach me"
+      },
+      {
+        "t": 44.024,
+        "he": "אני כמוך ומכאן תשארי איתי",
+        "en": "I'm like you, and from now on, stay with me"
+      },
+      {
+        "t": 49.055,
+        "he": "הנצח גדול",
+        "en": "Eternity is vast"
+      },
+      {
+        "t": 50.639,
+        "he": "אם לא את אז מי תבין אותי",
+        "en": "If not you, then who will understand me"
+      },
+      {
+        "t": 54.918,
+        "he": "את כל השריטות",
+        "en": "All my scars"
+      },
+      {
+        "t": 57.27,
+        "he": "מאמי שימי יד נזרוק את הפחד מכל המדרגות",
+        "en": "Baby, take my hand—we'll throw fear down every flight of stairs"
+      },
+      {
+        "t": 66.218,
+        "he": "אם נספר את הסיפור מהתחלה",
+        "en": "If we tell the story from the beginning"
+      },
+      {
+        "t": 68.999,
+        "he": "באתי לחפש אמת לא תהילה",
+        "en": "I came looking for truth, not glory"
+      },
+      {
+        "t": 71.288,
+        "he": "רחוק בגוף אבל קרוב",
+        "en": "Far away in body, but close"
+      },
+      {
+        "t": 73.447,
+        "he": "כשזה נכון אז זה מגיע בדיוק בזמן",
+        "en": "When it's right, it comes exactly on time"
+      },
+      {
+        "t": 79.397,
+        "he": "חכה שיגיע סימן",
+        "en": "Wait for a sign to come"
+      },
+      {
+        "t": 92.687,
+        "he": "חיבוק של נשמות אחר כך כל השאר",
+        "en": "An embrace of souls, and then everything else"
+      },
+      {
+        "t": 93.448,
+        "he": "איתך העצב מאושר",
+        "en": "With you, sorrow is happy"
+      },
+      {
+        "t": 95.171,
+        "he": "עם הזמן את תלמדי אותי",
+        "en": "In time, you'll teach me"
+      },
+      {
+        "t": 98.112,
+        "he": "אני כמוך ומכאן תשארי איתי",
+        "en": "I'm like you, and from now on, stay with me"
+      },
+      {
+        "t": 102.8,
+        "he": "הנצח גדול",
+        "en": "Eternity is vast"
+      },
+      {
+        "t": 104.863,
+        "he": "אם לא את אז מי תבין אותי",
+        "en": "If not you, then who will understand me"
+      },
+      {
+        "t": 109.086,
+        "he": "את כל השריטות",
+        "en": "All my scars"
       }
     ]
   }
