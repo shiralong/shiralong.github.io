@@ -1,0 +1,16 @@
+{
+  "REPLACE_WITH_SPOTIFY_TRACK_ID": {
+    "title": "התקווה (Hatikvah)",
+    "artist": "Sample — retime for the recording you use",
+    "lines": [
+      { "t": 0.0,  "he": "כל עוד בלבב פנימה",        "en": "As long as deep in the heart" },
+      { "t": 4.0,  "he": "נפש יהודי הומיה",            "en": "a Jewish soul still yearns," },
+      { "t": 8.0,  "he": "ולפאתי מזרח קדימה",         "en": "and toward the edges of the east," },
+      { "t": 12.0, "he": "עין לציון צופיה",            "en": "an eye still looks to Zion —" },
+      { "t": 16.0, "he": "עוד לא אבדה תקוותנו",        "en": "our hope is not yet lost," },
+      { "t": 20.0, "he": "התקווה בת שנות אלפיים",      "en": "the hope of two thousand years:" },
+      { "t": 24.0, "he": "להיות עם חופשי בארצנו",      "en": "to be a free people in our land," },
+      { "t": 28.0, "he": "ארץ ציון וירושלים",          "en": "the land of Zion and Jerusalem.", "end": 33.0 }
+    ]
+  }
+}
