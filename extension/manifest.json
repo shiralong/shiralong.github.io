@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Shiralong – Hebrew lyrics with English translation",
+  "short_name": "Shiralong",
+  "version": "1.0.0",
+  "description": "Hebrew lyrics with English translation, in sync with whatever is playing in the Spotify web player.",
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "action": {
+    "default_title": "Shiralong",
+    "default_icon": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["content.js"],
+      "css": ["panel.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["https://shiralong.github.io/*"],
+  "permissions": ["storage"]
+}
