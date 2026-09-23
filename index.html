@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>Shiralong · Hebrew lyrics, live</title>
+<link rel="icon" href="extension/icons/48.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000; --card: #1c1c1e; --ink: #f5f5f7; --ink-2: #98989d; --dim: #48484a;
+    --green: #32d74b; --green-soft: rgba(50,215,75,.14); --line: rgba(255,255,255,.1);
+    --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-he: 'Heebo', -apple-system, 'SF Hebrew', 'Segoe UI', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-en); -webkit-font-smoothing: antialiased; letter-spacing: -.005em; }
+  main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+  .hero { text-align: center; margin-bottom: 3rem; }
+  .hero .demo { margin: 0 auto 2rem; max-width: 24rem; text-align: center; }
+  .hero .line { color: var(--dim); margin-bottom: 1.1rem; }
+  .hero .line.current { color: var(--green); }
+  .hero .line.done { color: var(--green); opacity: .5; }
+  .hero .he { display: block; direction: rtl; font-family: var(--font-he); font-size: 1.5rem; font-weight: 700; line-height: 1.3; }
+  .hero .line.current .he { font-size: 1.9rem; }
+  .hero .en { display: block; font-size: .95rem; margin-top: .15rem; }
+  h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -.035em; margin: 0 0 .5rem; }
+  .sub { color: var(--ink-2); font-size: 1.1rem; margin: 0; }
+  .card { background: var(--card); border-radius: 22px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  .card h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; margin: 0 0 .5rem; }
+  .card p { color: var(--ink-2); margin: .4rem 0; line-height: 1.5; }
+  .card ol { color: var(--ink-2); padding-left: 1.3rem; line-height: 1.6; margin: .6rem 0 0; }
+  .card ol b { color: var(--ink); font-weight: 500; }
+  .primary { display: inline-block; background: var(--green); color: #fff; border-radius: 999px; padding: .75rem 1.5rem; font-weight: 600; text-decoration: none; margin-top: 1rem; }
+  .primary:hover { filter: brightness(1.06); }
+  .ghost { display: inline-block; background: var(--green-soft); color: var(--green); border-radius: 999px; padding: .6rem 1.2rem; font-weight: 500; text-decoration: none; margin-top: 1rem; margin-right: .5rem; }
+  .small { font-size: .85rem; color: var(--ink-2); }
+  code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .85em; background: var(--green-soft); padding: .1rem .4rem; border-radius: 6px; }
+  footer { text-align: center; color: var(--dim); font-size: .8rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="demo" aria-hidden="true">
+      <div class="line done"><span class="he">בכל רחבי תבל חיפשתי רק אותך</span><span class="en">I searched the whole wide world for only you</span></div>
+      <div class="line current"><span class="he">ושער הדמעות נפתח</span><span class="en">And the Gate of Tears opened</span></div>
+      <div class="line"><span class="he">עם הזמן את תלמדי אותי</span><span class="en">In time, you'll teach me</span></div>
+    </div>
+    <h1>Shiralong</h1>
+    <p class="sub">Hebrew lyrics with English translation, in sync with whatever you're playing on Spotify.</p>
+  </section>
+
+  <section class="card">
+    <h2>Use it in your browser</h2>
+    <p>Install the Shiralong extension for Chrome, Edge or Brave. It adds a lyrics panel next to the Spotify web player — nothing to sign up for.</p>
+    <ol>
+      <li><b>Install the extension</b> from the Chrome Web Store.</li>
+      <li>Open <b>open.spotify.com</b> and log in to Spotify as usual.</li>
+      <li>Play a song. The lyrics appear on the right; click the Shiralong icon to hide or show them.</li>
+    </ol>
+    <a class="primary" id="storeLink" href="#">Install for Chrome</a>
+    <p class="small">Desktop browsers only. Songs are added to the library over time; if one is missing, you'll see a note in the panel.</p>
+  </section>
+
+  <section class="card">
+    <h2>Invited users</h2>
+    <p>If you've been added to the Shiralong Spotify app, you can use the full version, which follows your Spotify from any device — including the phone app.</p>
+    <a class="ghost" href="personal/">Open the app</a>
+  </section>
+
+  <footer>Translations are reviewed by hand. Lyrics timing courtesy of LRCLIB.</footer>
+</main>
+<script>
+  // Once the extension is published, put its Chrome Web Store URL here.
+  const STORE_URL = '';
+  const a = document.getElementById('storeLink');
+  if (STORE_URL) a.href = STORE_URL;
+  else { a.textContent = 'Coming soon to the Chrome Web Store'; a.style.opacity = .6; a.onclick = (e) => e.preventDefault(); }
+</script>
+</body>
+</html>
