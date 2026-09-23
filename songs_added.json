@@ -931,101 +931,195 @@
       }
     ]
   },
-      "2Vz3qU0ZTQpCSGFjX2BVuZ": {
+  "2Vz3qU0ZTQpCSGFjX2BVuZ": {
     "title": "אח על מלא",
     "artist": "Ben Zur",
     "lines": [
       {
-        "t": 4.984,
+        "t": 4.859,
         "he": "היית אח על מלא",
-        "en": "You were a brother through and through"
+        "en": "You were one hell of a brother"
       },
       {
-        "t": 9.421,
+        "t": 9.314,
         "he": "אם מישהו דיבר אליי קצת לא יפה",
         "en": "If someone spoke to me even a little disrespectfully"
       },
       {
-        "t": 13.321,
-        "he": "איך הייתה ניגנב",
+        "t": 13.241,
+        "he": "איך הייתה נגנב",
         "en": "How you'd lose it"
       },
       {
-        "t": 16.817,
+        "t": 17.164,
         "he": "רב מכות עם כל העולם",
         "en": "Picking fights with the whole world"
       },
       {
-        "t": 21.716,
+        "t": 21.43,
         "he": "תמיד עם אולדסטאר לבנות",
         "en": "Always in white All Stars"
       },
       {
-        "t": 24.7,
+        "t": 24.669,
         "he": "היית ג׳וני דפ של הבנות",
         "en": "You were the girls' Johnny Depp"
       },
       {
-        "t": 28.068,
+        "t": 28.28,
         "he": "שטפנו כלים בינעקלה",
         "en": "We washed dishes at Binyankele"
       },
       {
-        "t": 32.595,
+        "t": 32.616,
         "he": "22 שקל לשעה",
         "en": "22 shekels an hour"
       },
       {
-        "t": 37.037,
+        "t": 36.553,
         "he": "כמה שתינו וודקה אדומה",
         "en": "How much red vodka we drank"
       },
       {
-        "t": 41.604,
+        "t": 41.687,
         "he": "היינו נופלים כמו שתי טיפות לאדמה",
         "en": "We'd fall like two raindrops to the ground"
       },
       {
-        "t": 45.504,
+        "t": 45.621,
         "he": "איזה ימים איזו תקופה",
-        "en": "What days, what a time"
+        "en": "Those were the days, what a time"
       },
       {
-        "t": 53.518,
-        "he": "פתאום גילית יש רבנו בעולם התחלת לעבוד על המידות כמו בן אדם אמרת לי אח כמה השתנו לי החיים",
-        "en": "Suddenly you discovered our Rebbe is in the world, started working on your character like a decent man, and told me, “Brother, how my life has changed”"
+        "t": 53.904,
+        "he": "פתאום גילית יש רבנו בעולם",
+        "en": "Suddenly you discovered that Rabbeinu is in the world"
       },
       {
-        "t": 69.698,
-        "he": "ניצלת תכוחות שלך",
-        "en": "You used your strength"
+        "t": 58.04,
+        "he": "התחלת לעבוד על המידות כמו בן אדם",
+        "en": "You started working on your character like a real person"
       },
       {
-        "t": 71.902,
-        "he": "בחרת באמת כל יום אתה עושה תשובה כל יום מכה על חטא אמרת לי אח תתחיל לכתוב שירים לאלוהים",
-        "en": "You chose the truth; every day you repent, every day you beat your breast in confession; you told me, “Brother, start writing songs to God”"
+        "t": 62.045,
+        "he": "אמרת לי בן אתה לא יודע מה אתה מפסיד",
+        "en": "You told me, Ben, you don't know what you're missing"
       },
       {
-        "t": 84.136,
+        "t": 68.817,
+        "he": "ניצלת ת'כוחות שלך בחרת באמת",
+        "en": "You harnessed your strength, you chose the truth"
+      },
+      {
+        "t": 73.512,
+        "he": "כל יום אתה עושה תשובה",
+        "en": "Every day you repent"
+      },
+      {
+        "t": 75.742,
+        "he": "כל יום מכה על חטא אמרת לי בן",
+        "en": "Every day you beat your breast and confess, you told me, Ben"
+      },
+      {
+        "t": 79.364,
+        "he": "תתחיל לכתוב שירים לאלוהים",
+        "en": "Start writing songs to God"
+      },
+      {
+        "t": 84.51,
         "he": "היית אח בלילות למדנו סיפורי מעשיות",
-        "en": "You were a brother; at night we studied Tales of Old"
+        "en": "You were a brother—in the nights we studied Tales of Ancient Times"
       },
       {
-        "t": 90.719,
-        "he": "עישנו קופסא עולים על טיסה לחדרים שבלב ראיתי אותי בעיניים שלך",
-        "en": "We smoked a pack, boarding a flight to the chambers of the heart; I saw myself in your eyes"
+        "t": 90.668,
+        "he": "עישנו קופסא עולים על טיסה לחדרים שבלב",
+        "en": "We smoked a pack, boarding a flight to the chambers of the heart"
       },
       {
-        "t": 103.843,
+        "t": 98.649,
+        "he": "ראיתי אותי בעיניים שלך",
+        "en": "I saw myself in your eyes"
+      },
+      {
+        "t": 103.577,
         "he": "זוכר שקפצתי לאש בשבילך",
-        "en": "Remember when I jumped into the fire for you"
+        "en": "Remember how I jumped into the fire for you"
       },
       {
-        "t": 107.776,
+        "t": 107.668,
         "he": "איזה ימים איזה תקופה",
-        "en": "What days, what a time"
+        "en": "Those were the days, what a time"
+      },
+      {
+        "t": 116.073,
+        "he": "פתאום גילית יש רבנו בעולם",
+        "en": "Suddenly you discovered that Rabbeinu is in the world"
+      },
+      {
+        "t": 119.976,
+        "he": "התחלת לעבוד על המידות כמו בן אדם",
+        "en": "You started working on your character like a real person"
+      },
+      {
+        "t": 124.167,
+        "he": "אמרת לי בן אתה לא יודע מה אתה מפסיד",
+        "en": "You told me, Ben, you don't know what you're missing"
+      },
+      {
+        "t": 131.016,
+        "he": "ניצלת ת'כוחות שלך בחרת באמת",
+        "en": "You harnessed your strength, you chose the truth"
+      },
+      {
+        "t": 135.512,
+        "he": "כל יום אתה עושה תשובה",
+        "en": "Every day you repent"
+      },
+      {
+        "t": 137.686,
+        "he": "כל יום מכה על חטא אמרת לי בן",
+        "en": "Every day you beat your breast and confess, you told me, Ben"
+      },
+      {
+        "t": 141.472,
+        "he": "תתחיל לכתוב שירים לאלוהים",
+        "en": "Start writing songs to God"
+      },
+      {
+        "t": 161.038,
+        "he": "פתאום גילית יש רבנו בעולם",
+        "en": "Suddenly you discovered that Rabbeinu is in the world"
+      },
+      {
+        "t": 166.737,
+        "he": "התחלת לעבוד על המידות כמו בן אדם",
+        "en": "You started working on your character like a real person"
+      },
+      {
+        "t": 170.987,
+        "he": "אמרת לי בן כמה השתנו לי החיים",
+        "en": "You told me, Ben, how my life has changed"
+      },
+      {
+        "t": 178.39,
+        "he": "ניצלת ת'כוחות שלך בחרת באמת",
+        "en": "You harnessed your strength, you chose the truth"
+      },
+      {
+        "t": 182.366,
+        "he": "כל יום אתה עושה תשובה",
+        "en": "Every day you repent"
+      },
+      {
+        "t": 184.792,
+        "he": "כל יום מכה על חטא אמרת לי בן",
+        "en": "Every day you beat your breast and confess, you told me, Ben"
+      },
+      {
+        "t": 188.507,
+        "he": "תתחיל לכתוב שירים לאלוהים",
+        "en": "Start writing songs to God"
       }
     ]
   }
-
 }
