@@ -30,7 +30,8 @@
       <button class="sl-btn sl-off" title="Lyrics later (+0.5 s)">+</button>
       <button class="sl-btn sl-close" title="Hide (click the Shiralong icon to show again)">×</button>
     </div>
-    <div class="sl-body"><div class="sl-stage"></div></div>`;
+    <div class="sl-body"><div class="sl-stage"></div></div>
+    <div class="sl-grip" title="Drag to resize"></div>`;
   document.documentElement.appendChild(panel);
   const $ = (sel) => panel.querySelector(sel);
   const stage = $('.sl-stage'), body = $('.sl-body');
@@ -47,6 +48,20 @@
   }
   try { chrome.storage.local.get(['open'], (r) => setOpen(r.open !== false)); } catch { setOpen(true); }
   try { chrome.runtime.onMessage.addListener((m) => { if (m && m.type === 'toggle') setOpen(!open); }); } catch {}
+
+  // Resizable width (drag the left edge), remembered across sessions
+  function setWidth(w) {
+    w = Math.max(280, Math.min(Math.round(w), Math.round(window.innerWidth * 0.8)));
+    document.documentElement.style.setProperty('--sl-w', w + 'px');
+    try { chrome.storage.local.set({ width: w }); } catch {}
+  }
+  try { chrome.storage.local.get(['width'], (r) => { if (r.width) setWidth(r.width); }); } catch {}
+  $('.sl-grip').addEventListener('mousedown', (e) => {
+    e.preventDefault(); panel.classList.add('sl-resizing');
+    const move = (ev) => setWidth(window.innerWidth - ev.clientX);
+    const up = () => { panel.classList.remove('sl-resizing'); window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
+    window.addEventListener('mousemove', move); window.addEventListener('mouseup', up);
+  });
 
   function setOffset(v) {
     offset = Math.round(v * 10) / 10;
