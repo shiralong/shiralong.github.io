@@ -358,7 +358,7 @@
   // ---------- Lyrics data ----------
   async function loadSongs() {
     songs = {};
-    for (const file of ['songs.json', 'songs_added.json']) {   // hand-added file wins over the batch file
+    for (const file of ['../songs.json', '../songs_added.json']) {   // hand-added file wins over the batch file
       try {
         const r = await fetch(file, { cache: 'no-store' });
         if (r.ok) Object.assign(songs, await r.json());
