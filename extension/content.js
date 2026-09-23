@@ -2,8 +2,8 @@
 // Hebrew lyrics + English translation in a side panel, in sync with playback.
 (() => {
   'use strict';
-  if (window.__shiralong) return;
-  window.__shiralong = true;
+  if (window.__shiralong) { try { window.__shiralong.open(); } catch {} return; }
+  window.__shiralong = { open: () => {} };
 
   const SITE = 'https://shiralong.github.io/';
   const ID_RE = /(?:\/track\/|spotify:track:)([A-Za-z0-9]{22})/;
@@ -28,11 +28,15 @@
       <button class="sl-btn sl-off" title="Lyrics earlier (−0.5 s)">−</button>
       <span class="sl-offval" title="Timing offset">0.0</span>
       <button class="sl-btn sl-off" title="Lyrics later (+0.5 s)">+</button>
-      <button class="sl-btn sl-close" title="Hide (click the Shiralong icon to show again)">×</button>
+      <button class="sl-btn sl-close" title="Hide">×</button>
     </div>
     <div class="sl-body"><div class="sl-stage"></div></div>
     <div class="sl-grip" title="Drag to resize"></div>`;
   document.documentElement.appendChild(panel);
+  const pill = document.createElement('button');
+  pill.id = 'shiralong-pill'; pill.textContent = 'Shiralong'; pill.title = 'Show lyrics';
+  pill.onclick = () => setOpen(true);
+  document.documentElement.appendChild(pill);
   const $ = (sel) => panel.querySelector(sel);
   const stage = $('.sl-stage'), body = $('.sl-body');
   const [btnMinus, btnPlus] = panel.querySelectorAll('.sl-off');
@@ -40,14 +44,16 @@
   btnPlus.onclick = () => setOffset(offset + 0.5);
   $('.sl-close').onclick = () => setOpen(false);
 
+  window.__shiralong.open = () => setOpen(true);
   function setOpen(v) {
     open = v;
     panel.classList.toggle('sl-hidden', !open);
+    pill.classList.toggle('sl-show', !open);
     document.documentElement.classList.toggle('shiralong-open', open);
     try { chrome.storage.local.set({ open }); } catch {}
   }
   try { chrome.storage.local.get(['open'], (r) => setOpen(r.open !== false)); } catch { setOpen(true); }
-  try { chrome.runtime.onMessage.addListener((m) => { if (m && m.type === 'toggle') setOpen(!open); }); } catch {}
+  try { chrome.runtime.onMessage.addListener((m, _s, reply) => { if (m && (m.type === 'toggle' || m.type === 'show')) { setOpen(m.type === 'show' ? true : !open); reply && reply({ ok: true }); } }); } catch {}
 
   // Resizable width (drag the left edge), remembered across sessions
   function setWidth(w) {
