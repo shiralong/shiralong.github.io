@@ -64,7 +64,7 @@
       <li>Open <b>open.spotify.com</b> and log in to Spotify as usual.</li>
       <li>Play a song. The lyrics appear on the right; click the Shiralong icon to hide or show them.</li>
     </ol>
-    <a class="primary" id="storeLink" href="#">Install for Chrome</a>
+    <a class="primary" id="storeLink" href="https://chromewebstore.google.com/detail/jemjkeklebhobefimbopdaggafegfcba" target="_blank" rel="noopener">Install for Chrome</a>
     <p class="small">Desktop browsers only. Songs are added to the library over time; if one is missing, you'll see a note in the panel.</p>
   </section>
 
@@ -74,11 +74,11 @@
     <a class="ghost" href="personal/">Open the app</a>
   </section>
 
-  <footer>Translations are reviewed by hand. Lyrics timing courtesy of LRCLIB.</footer>
+  <footer>Translations are reviewed by hand. Lyrics timing courtesy of LRCLIB. · <a href="privacy.html" style="color:inherit">Privacy</a></footer>
 </main>
 <script>
   // Once the extension is published, put its Chrome Web Store URL here.
-  const STORE_URL = '';
+  const STORE_URL = 'https://chromewebstore.google.com/detail/jemjkeklebhobefimbopdaggafegfcba';
   const a = document.getElementById('storeLink');
   if (STORE_URL) a.href = STORE_URL;
   else { a.textContent = 'Coming soon to the Chrome Web Store'; a.style.opacity = .6; a.onclick = (e) => e.preventDefault(); }
