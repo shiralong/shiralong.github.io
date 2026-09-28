@@ -22,13 +22,26 @@
   html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-en); -webkit-font-smoothing: antialiased; letter-spacing: -.005em; }
   main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
   .hero { text-align: center; margin-bottom: 2rem; }
-  .hero .demo { margin: 0 auto 1.25rem; max-width: 24rem; text-align: center; }
-  .hero .line { color: var(--dim); margin-bottom: .8rem; }
-  .hero .line.current { color: var(--green); }
-  .hero .line.done { color: var(--green); opacity: .5; }
-  .hero .he { display: block; direction: rtl; font-family: var(--font-he); font-size: 1.5rem; font-weight: 700; line-height: 1.3; }
-  .hero .line.current .he { font-size: 1.9rem; }
-  .hero .en { display: block; font-size: .95rem; margin-top: .15rem; }
+  .demo {
+    margin: 0 auto 1.25rem; max-width: 42rem; text-align: center;
+    background: var(--card); border-radius: 22px; padding: 0 1.5rem 1rem; overflow: hidden;
+  }
+  .demo-head { display: flex; align-items: center; gap: .5rem; padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: .85rem; }
+  .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+  .demo-title { font-family: var(--font-he); font-weight: 600; color: var(--ink); }
+  .demo-artist { color: var(--ink-2); }
+  .demo-window { position: relative; height: 13.5rem; overflow: hidden; }
+  .demo-window::before, .demo-window::after { content: ''; position: absolute; left: 0; right: 0; height: 2.2rem; z-index: 1; pointer-events: none; }
+  .demo-window::before { top: 0; background: linear-gradient(var(--card), transparent); }
+  .demo-window::after { bottom: 0; background: linear-gradient(transparent, var(--card)); }
+  .demo-track { transition: transform .6s cubic-bezier(.4,0,.2,1); }
+  @media (prefers-reduced-motion: reduce) { .demo-track, .demo .line { transition: none !important; } }
+  .demo .line { height: 4.5rem; display: flex; flex-direction: column; justify-content: center; color: var(--dim); transition: color .35s ease, opacity .35s ease, transform .35s ease; transform: scale(.94); }
+  .demo .he { display: block; direction: rtl; font-family: var(--font-he); font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
+  .demo .en { display: block; font-size: .9rem; margin-top: .15rem; opacity: .85; }
+  .demo .line.current { color: var(--green); transform: scale(1); }
+  .demo .line.current .he { font-size: 1.6rem; }
+  .demo .line.done { color: var(--green); opacity: .5; }
   h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -.035em; margin: 0 0 .5rem; }
   .sub { color: var(--ink-2); font-size: 1.1rem; margin: 0; }
   .card { background: var(--card); border-radius: 22px; padding: 1.75rem; margin-bottom: 1.25rem; }
@@ -49,11 +62,6 @@
 <body>
 <main>
   <section class="hero">
-    <div class="demo" aria-hidden="true">
-      <div class="line done"><span class="he">בכל רחבי תבל חיפשתי רק אותך</span><span class="en">I searched the whole wide world for only you</span></div>
-      <div class="line current"><span class="he">ושער הדמעות נפתח</span><span class="en">And the Gate of Tears opened</span></div>
-      <div class="line"><span class="he">עם הזמן את תלמדי אותי</span><span class="en">In time, you'll teach me</span></div>
-    </div>
     <h1>Shiralong</h1>
     <p class="sub">Hebrew lyrics with English translation, in sync with whatever you're playing on Spotify.</p>
   </section>
@@ -71,7 +79,47 @@
   </section>
 
 
+  <section class="demo" aria-hidden="true">
+    <div class="demo-head"><span class="demo-dot"></span><span class="demo-title">ליקוטי מוהר"ן</span><span class="demo-artist">Ben Zur</span></div>
+    <div class="demo-window"><div class="demo-track" id="demoTrack"></div></div>
+  </section>
+
   <footer>Translations are reviewed by hand. Lyrics timing courtesy of LRCLIB. · <a href="mailto:hello@shiralong.com" style="color:inherit">hello@shiralong.com</a> · <a href="privacy.html" style="color:inherit">Privacy</a></footer>
 </main>
+<script>
+  (() => {
+    const lyrics = [
+      ['באתי לחפש אמת לא תהילה', 'I came looking for truth, not glory'],
+      ['רחוק בגוף אבל קרוב', 'Far away in body, but close'],
+      ['כשזה נכון אז זה מגיע בדיוק בזמן', "When it's right, it comes exactly on time"],
+      ['חכה שיגיע סימן', 'Wait for a sign to come'],
+      ['חיבוק של נשמות אחר כך כל השאר', 'An embrace of souls, and then everything else'],
+      ['איתך העצב מאושר', 'With you, even sadness is happy'],
+      ['עם הזמן את תלמדי אותי', "With time, you'll teach me"],
+      ['אני כמוך ומכאן תשארי איתי', "I'm like you, and from now on, stay with me"],
+    ];
+    const track = document.getElementById('demoTrack');
+    track.innerHTML = lyrics.map(([he, en]) => `<div class="line"><span class="he">${he}</span><span class="en">${en}</span></div>`).join('');
+    const lines = [...track.children];
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    let i = 0;
+    const paint = () => {
+      lines.forEach((l, k) => { l.className = 'line' + (k < i ? ' done' : k === i ? ' current' : ''); });
+      track.style.transform = `translateY(${(1 - i) * 4.5 * rem}px)`;   // keep the current line in the middle slot
+    };
+    paint();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(() => {
+      i++;
+      if (i >= lines.length) {                       // song over: fade out, start again
+        track.style.opacity = 0;
+        setTimeout(() => { i = 0; paint(); track.style.opacity = 1; }, 600);
+        return;
+      }
+      paint();
+    }, 2600);
+    track.style.transition += ', opacity .6s';
+  })();
+</script>
 </body>
 </html>
