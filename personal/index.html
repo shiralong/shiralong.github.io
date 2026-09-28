@@ -362,11 +362,19 @@
     for (const file of ['../songs.json', '../songs_added.json']) {   // hand-added file wins over the batch file
       try {
         const r = await fetch(file, { cache: 'no-store' });
-        if (r.ok) Object.assign(songs, await r.json());
+        if (r.ok) {
+          for (const [id, entry] of Object.entries(await r.json())) {
+            if (songs[id] && songs[id].duration && !entry.duration) entry.duration = songs[id].duration;
+            songs[id] = entry;
+          }
+        }
         else if (file === 'songs.json') el.status.textContent = 'Could not load songs.json';
       } catch (e) { if (file === 'songs.json') el.status.textContent = 'Could not load songs.json'; }
     }
-    Object.assign(songs, cacheRead());   // songs fetched in this browser win over the repo files
+    for (const [id, entry] of Object.entries(cacheRead())) {   // songs fetched in this browser win over the repo files
+      if (songs[id] && songs[id].duration && !entry.duration) entry.duration = songs[id].duration;
+      songs[id] = entry;
+    }
   }
   function cacheRead() { try { return JSON.parse(LS.get('songs_cache', '{}')) || {}; } catch { return {}; } }
   let storageWarned = false;
@@ -959,9 +967,9 @@
     const isLiked = /collection\/tracks|^liked/i.test(raw);
     const m = raw.match(/playlist[/:]([A-Za-z0-9]+)/) || [null, raw];
     const plId = isLiked ? 'liked' : m[1];
-    if (!plId) { alert('Paste a playlist link first.'); return; }
     plLog.innerHTML = '';
     try {
+      if (!plId) throw new Error('No playlist given');
       plProgress.textContent = 'Reading playlist…';
       const tracks = await playlistTracks(plId);
       let added = 0, had = 0, missing = 0;
@@ -971,8 +979,20 @@
         if (e.duration) { had++; continue; }
         e.duration = durSec(tr); cacheWrite(tr.id, e); added++;
       }
-      plProgress.textContent = `Track lengths: added to ${added} songs, ${had} already had one, ${missing} not in library. Now press "Download songs.json" and commit it.`;
-    } catch (e) { plProgress.textContent = e.message; }
+      plProgress.textContent = `Track lengths: added to ${added} songs, ${had} already had one, ${missing} not in library.`;
+    } catch (e) { plProgress.textContent = (raw ? e.message + ' — ' : '') + 'Continuing with the rest of the library…'; }
+    // Second pass: any library song still without a length (e.g. hand-added ones), fetched one by one by track id.
+    const todo = Object.entries(songs).filter(([id, e]) => e && e.lines && !e.duration && /^[A-Za-z0-9]{22}$/.test(id));
+    let done = 0, failed = 0;
+    for (const [id, e] of todo) {
+      plProgress.textContent = `Fetching lengths for songs not in the playlist: ${done + failed + 1} / ${todo.length}`;
+      try {
+        const t = await api('/tracks/' + id);
+        if (t && t.duration_ms) { e.duration = Math.round(t.duration_ms) / 1000; cacheWrite(id, e); done++; } else failed++;
+      } catch (err) { failed++; logRow(`Length failed: ${e.title} — ${err.message}`); }
+      await sleep(350);
+    }
+    plProgress.textContent += ` Done: ${done} more lengths added${failed ? `, ${failed} failed` : ''}. Now press "Download songs.json" and commit it.`;
   };
 
   $('btnBatchStop').onclick = () => { batchRunning = false; plProgress.textContent += ' — stopping after this song'; };
