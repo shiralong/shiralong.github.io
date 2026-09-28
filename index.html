@@ -88,37 +88,39 @@
 </main>
 <script>
   (() => {
-    const lyrics = [
-      ['באתי לחפש אמת לא תהילה', 'I came looking for truth, not glory'],
-      ['רחוק בגוף אבל קרוב', 'Far away in body, but close'],
-      ['כשזה נכון אז זה מגיע בדיוק בזמן', "When it's right, it comes exactly on time"],
-      ['חכה שיגיע סימן', 'Wait for a sign to come'],
-      ['חיבוק של נשמות אחר כך כל השאר', 'An embrace of souls, and then everything else'],
-      ['איתך העצב מאושר', 'With you, even sadness is happy'],
-      ['עם הזמן את תלמדי אותי', "With time, you'll teach me"],
-      ['אני כמוך ומכאן תשארי איתי', "I'm like you, and from now on, stay with me"],
-    ];
+    const lyrics = [[3.963, "וכל הלילה פה הבלאגן חגג", "And all night long, the madness raged here"], [14.476, "קראנו ליקוטי מוהרן על איזה גג", "We read Likutey Moharan up on some rooftop"], [16.88, "הייתי באורות נשבע לך בחיי", "I was on a high, I swear to you on my life"], [19.382, "את לא יודעת שמצאת חן בעייני", "You don't know you've found favor in my eyes"], [21.801, "לאט גרמת לי להבין שיש הבדל גדול", "Slowly, you made me see there's a world of difference"], [24.338, "בין אהבה לתאווה זה מסוכן ליפול", "Between love and lust—it’s dangerous to fall"], [26.917, "ויש דברים שאני כל כך מפחד לשאול", "And there are things I'm so afraid to ask"], [29.487, "אולי עדיף לא לדעת הכל", "Maybe it's better not to know everything"], [31.594, "בכל רחבי תבל חיפשתי רק אותך", "I searched the whole wide world for only you"], [36.941, "ושער הדמעות נפתח", "And the gate of tears opened"], [39.495, "עם הזמן את תלמדי אותי", "With time, you'll teach me"], [43.421, "אני כמוך ומכאן תשארי איתי", "I'm like you, and from now on, stay with me"], [48.243, "הנצח גדול", "Eternity is vast"], [50.314, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [54.301, "את כל השריטות", "All my scars"], [56.433, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"], [65.969, "אם נספר את הסיפור מהתחלה", "If we tell the story from the beginning"], [68.302, "באתי לחפש אמת לא תהילה", "I came looking for truth, not fame"], [70.638, "רחוק בגוף אבל קרוב בלב", "Far away in body, but close at heart"], [73.353, "היצרים רוצים להתקרב", "Our desires want to draw closer"], [75.603, "ואיך גרמת לי להבין", "And how you made me understand"], [77.133, "זה לא שחור לבן", "It isn't black and white"], [78.313, "אם תחפש רחוק תראה שיש שם אור קטן", "If you look far away, you'll see a little light there"], [80.768, "כשזה נכון אז זה מגיע בדיוק בזמן", "When it's right, it comes at exactly the right time"], [83.204, "חכה שיגיע סימן", "Wait for a sign to come"], [85.494, "חיבוק של נשמות אחר כך כל השאר", "An embrace of souls, and then everything else"], [90.513, "איתך העצב מאושר", "With you, even sadness is happy"], [93.458, "עם הזמן את תלמדי אותי", "With time, you'll teach me"], [97.289, "אני כמוך ומכאן תשארי איתי", "I'm like you, and from now on, stay with me"], [102.053, "הנצח גדול", "Eternity is vast"], [103.969, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [108.431, "את כל השריטות", "All my scars"], [110.504, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"], [115.485, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [136.499, "את כל השריטות", "All my scars"], [138.487, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"], [145.519, "עם הזמן את תלמדי אותי", "With time, you'll teach me"], [149.494, "אני כמוך ומכאן תשארי איתי", "I'm like you, and from now on, stay with me"], [154.188, "הנצח גדול", "Eternity is vast"], [156.175, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [160.276, "את כל השריטות", "All my scars"], [162.812, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"]];
+    const N = lyrics.length;
+    // Circular strip: [last] + all lines + [first, second], so three lines are always visible and the loop is seamless.
+    const strip = [lyrics[N - 1], ...lyrics, lyrics[0], lyrics[1]];
     const track = document.getElementById('demoTrack');
-    track.innerHTML = lyrics.map(([he, en]) => `<div class="line"><span class="he">${he}</span><span class="en">${en}</span></div>`).join('');
-    const lines = [...track.children];
-    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    let i = 0;
-    const paint = () => {
-      lines.forEach((l, k) => { l.className = 'line' + (k < i ? ' done' : k === i ? ' current' : ''); });
-      track.style.transform = `translateY(${(1 - i) * 4.5 * rem}px)`;   // keep the current line in the middle slot
+    track.innerHTML = strip.map(([, he, en]) => `<div class="line"><span class="he">${he}</span><span class="en">${en}</span></div>`).join('');
+    const els = [...track.children];
+    const rem = () => parseFloat(getComputedStyle(document.documentElement).fontSize);
+    let pos = 2;                                   // strip position of the current line (2 = the song's second line)
+    const paint = (animate = true) => {
+      track.style.transition = animate ? '' : 'none';
+      els.forEach((l, k) => { l.className = 'line' + (k < pos ? ' done' : k === pos ? ' current' : ''); });
+      track.style.transform = `translateY(${(1 - pos) * 4.5 * rem()}px)`;
+      if (!animate) void track.offsetHeight;        // flush so the next change animates again
     };
-    paint();
+    paint(false);
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    setInterval(() => {
-      i++;
-      if (i >= lines.length) {                       // song over: fade out, start again
-        track.style.opacity = 0;
-        setTimeout(() => { i = 0; paint(); track.style.opacity = 1; }, 600);
-        return;
-      }
-      paint();
-    }, 2600);
-    track.style.transition += ', opacity .6s';
+    const gapAfter = (k) => {                       // real timing from the library, with long instrumental gaps shortened
+      const cur = lyrics[k][0], next = k + 1 < N ? lyrics[k + 1][0] : cur + 3;
+      return Math.min(5, Math.max(1.2, next - cur)) * 1000;
+    };
+    const step = () => {
+      const k = pos - 1;                             // index into lyrics
+      setTimeout(() => {
+        pos++;
+        paint();
+        if (pos === N + 1) {                         // showing the copied first line: snap back to the real one
+          setTimeout(() => { pos = 1; paint(false); }, 650);
+        }
+        step();
+      }, gapAfter(k));
+    };
+    step();
   })();
 </script>
 </body>
