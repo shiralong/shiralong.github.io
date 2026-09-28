@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>Shiralong · Hebrew lyrics, live</title>
+<link rel="icon" href="extension/icons/48.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000; --card: #1c1c1e; --ink: #f5f5f7; --ink-2: #98989d; --dim: #48484a;
+    --green: #32d74b; --green-soft: rgba(50,215,75,.14); --line: rgba(255,255,255,.1);
+    --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-he: 'Heebo', -apple-system, 'SF Hebrew', 'Segoe UI', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-en); -webkit-font-smoothing: antialiased; letter-spacing: -.005em; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .hero { text-align: center; margin-bottom: 2rem; }
+  .demo {
+    margin: 1.75rem auto 0; max-width: 26rem; text-align: center;
+    background: var(--card); border-radius: 18px; padding: 0 1.25rem 1.4rem; overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+  }
+  .demo-head { display: flex; align-items: center; gap: .5rem; padding: .8rem 0; border-bottom: 1px solid var(--line); margin-bottom: 1.1rem; font-size: .8rem; }
+  .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+  .demo-title { font-family: var(--font-he); font-weight: 600; color: var(--ink); }
+  .demo-artist { color: var(--ink-2); }
+  .demo .line { color: var(--dim); margin-bottom: .95rem; transition: color .35s ease, opacity .35s ease, transform .35s ease; transform: scale(.96); }
+  .demo .line:last-child { margin-bottom: 0; }
+  .demo .he { display: block; direction: rtl; font-family: var(--font-he); font-size: 1.25rem; font-weight: 700; line-height: 1.3; }
+  .demo .en { display: block; font-size: .85rem; margin-top: .1rem; opacity: .85; }
+  .demo .line.current { color: var(--green); transform: scale(1); }
+  .demo .line.current .he { font-size: 1.45rem; }
+  .demo .line.done { color: var(--green); opacity: .5; }
+  @media (prefers-reduced-motion: reduce) { .demo .line { transition: none; } }
+  h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -.035em; margin: 0 0 .5rem; }
+  .sub { color: var(--ink-2); font-size: 1.1rem; margin: 0; }
+  .card { background: var(--card); border-radius: 22px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  .card h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; margin: 0 0 .5rem; }
+  .card p { color: var(--ink-2); margin: .4rem 0; line-height: 1.5; }
+  .card ol { color: var(--ink-2); padding-left: 1.3rem; line-height: 1.6; margin: .6rem 0 0; }
+  .card ol b { color: var(--ink); font-weight: 500; }
+  .card ol a, .card a.pl { color: var(--green); text-decoration: none; font-weight: 500; }
+  .card ol a b { color: var(--green); }
+  .primary { display: inline-block; background: var(--green); color: #fff; border-radius: 999px; padding: .75rem 1.5rem; font-weight: 600; text-decoration: none; margin-top: 1rem; }
+  .primary:hover { filter: brightness(1.06); }
+  .ghost { display: inline-block; background: var(--green-soft); color: var(--green); border-radius: 999px; padding: .6rem 1.2rem; font-weight: 500; text-decoration: none; margin-top: 1rem; margin-right: .5rem; }
+  .small { font-size: .85rem; color: var(--ink-2); }
+  code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .85em; background: var(--green-soft); padding: .1rem .4rem; border-radius: 6px; }
+  footer { text-align: center; color: var(--dim); font-size: .8rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>Shiralong</h1>
+    <p class="sub">Hebrew lyrics with English translation, in sync with whatever you're playing on Spotify.</p>
+    <div class="demo" aria-hidden="true">
+      <div class="demo-head"><span class="demo-dot"></span><span class="demo-title">ליקוטי מוהר"ן</span><span class="demo-artist">Ben Zur</span></div>
+      <div class="demo-lines">
+        <div class="line"><span class="he">באתי לחפש אמת לא תהילה</span><span class="en">I came looking for truth, not glory</span></div>
+        <div class="line"><span class="he">רחוק בגוף אבל קרוב</span><span class="en">Far away in body, but close</span></div>
+        <div class="line"><span class="he">כשזה נכון אז זה מגיע בדיוק בזמן</span><span class="en">When it's right, it comes exactly on time</span></div>
+        <div class="line"><span class="he">חכה שיגיע סימן</span><span class="en">Wait for a sign to come</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Use it in your browser</h2>
+    <p>Install the Shiralong extension for Chrome, Edge or Brave. It adds a lyrics panel next to the Spotify web player — nothing to sign up for.</p>
+    <ol>
+      <li><a href="https://chromewebstore.google.com/detail/jemjkeklebhobefimbopdaggafegfcba" target="_blank" rel="noopener"><b>Install the extension</b></a> from the Chrome Web Store.</li>
+      <li>In Chrome, open <a href="https://open.spotify.com/" target="_blank" rel="noopener"><b>open.spotify.com</b></a> and log in to Spotify as usual.</li>
+      <li>Play a song. The lyrics appear on the right; click the Shiralong icon to hide or show them.</li>
+    </ol>
+    <p>Looking for songs? Check out <a class="pl" href="https://open.spotify.com/playlist/4oHuPHOU4VTmZAhV1zTiBg" target="_blank" rel="noopener">the Shiralong playlist</a> — all our songs, with lyrics and translations ready to go.</p>
+    <p class="small" style="margin-top:1.2rem">Works with Spotify in the Chrome browser on a computer, not the Spotify app or phones. Songs are added to the library over time; if one is missing, you'll see a note in the panel.</p>
+  </section>
+
+
+  <footer>Translations are reviewed by hand. Lyrics timing courtesy of LRCLIB. · <a href="mailto:hello@shiralong.com" style="color:inherit">hello@shiralong.com</a> · <a href="privacy.html" style="color:inherit">Privacy</a></footer>
+</main>
+<script>
+  (() => {
+    const lines = [...document.querySelectorAll('.demo .line')];
+    let i = 1;
+    const paint = () => lines.forEach((l, k) => { l.className = 'line' + (k < i ? ' done' : k === i ? ' current' : ''); });
+    paint();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(() => { i = (i + 1) % (lines.length + 1); if (i === 0) { lines.forEach(l => l.className = 'line'); i = 0; return; } paint(); }, 2400);
+  })();
+</script>
+</body>
+</html>
