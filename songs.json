@@ -83358,7 +83358,8 @@
     "en": "Through melodies..."
    }
   ],
-  "source": "lrclib-untimed"
+  "source": "lrclib-untimed",
+  "duration": 178.669
  },
  "3RBjQjh6Day4D3WJhAFuHP": {
   "title": "מחשבות טובות",
@@ -83725,7 +83726,8 @@
     "en": "Ay ay ay yim"
    }
   ],
-  "source": "lrclib-synced"
+  "source": "lrclib-synced",
+  "duration": 230.942
  },
  "7HOY13l7GrAQPs04EUG5Z3": {
   "title": "יה שמע",
@@ -83844,7 +83846,8 @@
     "en": "Yah, Your people cry out from the depths, from so much distress; please do not send them away empty-handed from before You today"
    }
   ],
-  "source": "lrclib-untimed"
+  "source": "lrclib-untimed",
+  "duration": 193.874
  },
  "0BIn5KNnPdnDZrLJ2qLXnp": {
   "title": "תהיה בנאדם",
@@ -84214,7 +84217,8 @@
     "en": "I'm tired of being unhappy"
    }
   ],
-  "source": "lrclib-synced"
+  "source": "lrclib-synced",
+  "duration": 218.374
  },
  "6Gt2PGz5zL9HnnJo3UvDV4": {
   "title": "עולם בשני צבעים",
@@ -84411,7 +84415,8 @@
     "en": "How are we parting today"
    }
   ],
-  "source": "lrclib-synced"
+  "source": "lrclib-synced",
+  "duration": 208.777
  },
  "6EuV78LSE0PCdmYvVklGD7": {
   "title": "ואני בחסדך בטחתי",
@@ -84663,7 +84668,8 @@
     "en": "Should open Lesson 6 in Likutey Moharan"
    }
   ],
-  "source": "lrclib-synced"
+  "source": "lrclib-synced",
+  "duration": 179.807
  },
  "2iXmGGSbPmDaewdGziPLtS": {
   "title": "אולפנה של צביה",
@@ -84900,7 +84906,8 @@
     "en": "More than anything, thank You that I have You"
    }
   ],
-  "source": "lrclib-synced"
+  "source": "lrclib-synced",
+  "duration": 203.677
  },
  "7ASi7ezK3VWIgVSKHXgTCC": {
   "title": "מתפוצץ לי הראש",
@@ -85042,7 +85049,8 @@
     "en": "Basically, that's my daily routine"
    }
   ],
-  "source": "lrclib-synced"
+  "source": "lrclib-synced",
+  "duration": 184.519
  },
  "2H84mdRphvQn5QniG3v07a": {
   "title": "נחלת בנימין",
@@ -85287,6 +85295,225 @@
     "t": 155.4,
     "he": "אבל הלב לא מאושר",
     "en": "But her heart isn't happy"
+   }
+  ],
+  "source": "lrclib-synced",
+  "duration": 178.95
+ },
+ "5zCA71UDPv12dGHFmR4xTo": {
+  "title": "יחפים",
+  "artist": "מתן חסן",
+  "duration": 213.333,
+  "lines": [
+   {
+    "t": 16.48,
+    "he": "אם הייתי יכולה",
+    "en": "If I could"
+   },
+   {
+    "t": 19.65,
+    "he": "לצאת מהראש שלי",
+    "en": "get out of my head"
+   },
+   {
+    "t": 24.35,
+    "he": "ללכת ולמכור בשוק",
+    "en": "go and sell at the market"
+   },
+   {
+    "t": 27.57,
+    "he": "את כל המחשבות שלי",
+    "en": "all my thoughts"
+   },
+   {
+    "t": 32.62,
+    "he": "אם כל הרחובות היו ריקים עכשיו",
+    "en": "If all the streets were empty now"
+   },
+   {
+    "t": 36.01,
+    "he": "הייתי ריקה גם אני",
+    "en": "I'd be empty too"
+   },
+   {
+    "t": 40.51,
+    "he": "והזמזום הזה שלא מפסיק",
+    "en": "And this humming that won't stop"
+   },
+   {
+    "t": 43.94,
+    "he": "זאת המלחמה שלי",
+    "en": "That's my war"
+   },
+   {
+    "t": 48.46,
+    "he": "ואני יודעת שהוא לא ישאיר אותי לבד",
+    "en": "And I know He won't leave me alone"
+   },
+   {
+    "t": 56.92,
+    "he": "מה כבר ביקשתי",
+    "en": "What did I even ask for?"
+   },
+   {
+    "t": 60.12,
+    "he": "תהיה לי מים חיים",
+    "en": "Be living water for me"
+   },
+   {
+    "t": 64.04,
+    "he": "כי בסוף היום אנחנו",
+    "en": "Because at the end of the day, we are"
+   },
+   {
+    "t": 68.42,
+    "he": "יחפים ופשוטים",
+    "en": "barefoot and simple"
+   },
+   {
+    "t": 72.08,
+    "he": "אם תמשוך אותי אלייך",
+    "en": "If You pull me toward You"
+   },
+   {
+    "t": 76.02,
+    "he": "מעל עננים",
+    "en": "above the clouds"
+   },
+   {
+    "t": 80.33,
+    "he": "בחלומות שלי אנחנו",
+    "en": "In my dreams, we are"
+   },
+   {
+    "t": 84.33,
+    "he": "יחפים ופשוטים",
+    "en": "barefoot and simple"
+   },
+   {
+    "t": 96.88,
+    "he": "אפילו לא למכור",
+    "en": "Not even to sell them"
+   },
+   {
+    "t": 100.25,
+    "he": "לחלק בחינם",
+    "en": "to give them away for free"
+   },
+   {
+    "t": 104.39,
+    "he": "רק שיקחו את המשקל ממני",
+    "en": "Just so they'll take the weight off me"
+   },
+   {
+    "t": 108.24,
+    "he": "זה יותר מדי",
+    "en": "It's too much"
+   },
+   {
+    "t": 112.29,
+    "he": "וזו תקופה קצת מוזרה",
+    "en": "And it's a strange time"
+   },
+   {
+    "t": 116.27,
+    "he": "להיות בן אדם",
+    "en": "to be human"
+   },
+   {
+    "t": 120.38,
+    "he": "הייתי מוותרת על הגוף",
+    "en": "I'd give up the body"
+   },
+   {
+    "t": 124.18,
+    "he": "רק נשמה בעולם",
+    "en": "Just a soul in the world"
+   },
+   {
+    "t": 128.5,
+    "he": "ואני יודעת שהוא לא ישאיר אותי לבד",
+    "en": "And I know He won't leave me alone"
+   },
+   {
+    "t": 136.73,
+    "he": "מה כבר ביקשתי",
+    "en": "What did I even ask for?"
+   },
+   {
+    "t": 140.17,
+    "he": "תהיה לי מים חיים",
+    "en": "Be living water for me"
+   },
+   {
+    "t": 144.16,
+    "he": "כי בסוף היום אנחנו",
+    "en": "Because at the end of the day, we are"
+   },
+   {
+    "t": 148.16,
+    "he": "יחפים ופשוטים",
+    "en": "barefoot and simple"
+   },
+   {
+    "t": 152.12,
+    "he": "אם תמשוך אותי אלייך",
+    "en": "If You pull me toward You"
+   },
+   {
+    "t": 156.14,
+    "he": "מעל עננים (אוי, אוי, אוי)",
+    "en": "above the clouds (oy, oy, oy)"
+   },
+   {
+    "t": 160.42,
+    "he": "בחלומות שלי אנחנו",
+    "en": "In my dreams, we are"
+   },
+   {
+    "t": 164.17,
+    "he": "יחפים ופשוטים",
+    "en": "barefoot and simple"
+   },
+   {
+    "t": 168.91,
+    "he": "מה כבר ביקשתי",
+    "en": "What did I even ask for?"
+   },
+   {
+    "t": 172.45,
+    "he": "תהיה לי מים חיים",
+    "en": "Be living water for me"
+   },
+   {
+    "t": 176.18,
+    "he": "כי בסוף היום אנחנו",
+    "en": "Because at the end of the day, we are"
+   },
+   {
+    "t": 180.23,
+    "he": "יחפים ופשוטים",
+    "en": "barefoot and simple"
+   },
+   {
+    "t": 184.29,
+    "he": "אם תמשוך אותי אלייך",
+    "en": "If You pull me toward You"
+   },
+   {
+    "t": 188.25,
+    "he": "מעל עננים",
+    "en": "above the clouds"
+   },
+   {
+    "t": 192.26,
+    "he": "בחלומות שלי אנחנו",
+    "en": "In my dreams, we are"
+   },
+   {
+    "t": 196.31,
+    "he": "יחפים ופשוטים",
+    "en": "barefoot and simple"
    }
   ],
   "source": "lrclib-synced"
