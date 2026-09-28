@@ -240,7 +240,8 @@
       </div>
       <button class="primary" id="btnBatchStart">Start</button>
       <button class="ghost" id="btnBatchStop">Stop</button>
-      <button class="ghost" id="btnDownloadJson">Download songs.json</button>
+      <button class="ghost" id="btnDownloadJson">Download songs.json (everything)</button>
+      <button class="ghost" id="btnDownloadAdded">Download songs_added.json (only new or changed)</button>
       <button class="ghost" id="btnDownloadReport">Download report</button>
       <button class="ghost" id="btnFillDur">Fill track lengths</button>
       <button class="ghost" id="btnBack3">Back to lyrics</button>
@@ -327,6 +328,7 @@
 
   // ---------- State ----------
   let songs = {};            // trackId -> {title, artist, lines:[{t,he,en}]}
+  let repoBase = {};         // the repo's songs.json as loaded, to know what is already committed there
   let track = null;          // {id, title, artist, durationMs}
   let playing = false;
   let progressAtFetch = 0;   // ms
@@ -358,12 +360,14 @@
 
   // ---------- Lyrics data ----------
   async function loadSongs() {
-    songs = {};
+    songs = {}; repoBase = {};
     for (const file of ['../songs.json', '../songs_added.json']) {   // hand-added file wins over the batch file
       try {
         const r = await fetch(file, { cache: 'no-store' });
         if (r.ok) {
-          for (const [id, entry] of Object.entries(await r.json())) {
+          const data = await r.json();
+          if (file === '../songs.json') repoBase = JSON.parse(JSON.stringify(data));   // what the big file already has
+          for (const [id, entry] of Object.entries(data)) {
             if (songs[id] && songs[id].duration && !entry.duration) entry.duration = songs[id].duration;
             songs[id] = entry;
           }
@@ -960,6 +964,20 @@
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   }
+  // Only songs that differ from the repo's songs.json: new songs, corrected lyrics, added lengths. Small file to commit.
+  $('btnDownloadAdded').onclick = () => {
+    const out = {};
+    for (const [id, s] of Object.entries(songs)) {
+      if (id.startsWith('REPLACE') || !s.lines?.length) continue;
+      const base = repoBase[id];
+      if (!base || JSON.stringify(base) !== JSON.stringify(s)) out[id] = s;
+    }
+    const n = Object.keys(out).length;
+    if (!n) { alert('Nothing new: everything is already in songs.json.'); return; }
+    downloadText('songs_added.json', JSON.stringify(out, null, 1), 'application/json');
+    plProgress.textContent = `songs_added.json: ${n} song${n === 1 ? '' : 's'} not yet in songs.json. Commit it to the repo (it replaces the old songs_added.json).`;
+  };
+
   $('btnDownloadReport').onclick = () => { if (!lastReport) { alert('Run a playlist first.'); return; } downloadText('playlist-report.txt', lastReport); };
   // Adds each track's exact length (from Spotify) to songs already in the library, without touching lyrics. No API keys needed.
   $('btnFillDur').onclick = async () => {
