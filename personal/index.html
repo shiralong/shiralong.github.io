@@ -242,6 +242,7 @@
       <button class="ghost" id="btnBatchStop">Stop</button>
       <button class="ghost" id="btnDownloadJson">Download songs.json (everything)</button>
       <button class="ghost" id="btnDownloadAdded">Download playlist.json (this playlist's songs)</button>
+      <button class="ghost" id="btnDownloadCached">Download cached-only songs</button>
       <button class="ghost" id="btnDownloadReport">Download report</button>
       <button class="ghost" id="btnFillDur">Fill track lengths</button>
       <button class="ghost" id="btnBack3">Back to lyrics</button>
@@ -985,6 +986,19 @@
     if (!n) { plProgress.textContent = 'None of the songs in this playlist have lyrics yet.'; return; }
     downloadText('playlist.json', JSON.stringify(out, null, 1), 'application/json');
     plProgress.textContent = `playlist.json: ${n} songs with lyrics${noLyrics ? ` (${noLyrics} without lyrics left out)` : ''}. To add them to songs_added.json, paste the entries inside its outer braces, with a comma after the previous entry.`;
+  };
+
+  // cached.json: songs that exist only in this browser (auto-fetched while listening, or added here) and are in neither repo file.
+  $('btnDownloadCached').onclick = () => {
+    const out = {};
+    for (const [id, s] of Object.entries(cacheRead())) {
+      if (!s || !s.lines?.length || repoBase[id] || repoAdded[id]) continue;
+      out[id] = s;
+    }
+    const n = Object.keys(out).length;
+    if (!n) { plProgress.textContent = 'Nothing cached that is not already in the repo.'; return; }
+    downloadText('cached.json', JSON.stringify(out, null, 1), 'application/json');
+    plProgress.textContent = `cached.json: ${n} song${n === 1 ? '' : 's'} only in this browser — ${Object.values(out).map((s) => s.title).join(' · ')}. Paste the entries into songs_added.json.`;
   };
 
   $('btnDownloadReport').onclick = () => { if (!lastReport) { alert('Run a playlist first.'); return; } downloadText('playlist-report.txt', lastReport); };
