@@ -596,15 +596,29 @@
   $('btnDisconnect').onclick = () => { logout(); show('viewer'); };
 
   // ---------- Playback polling ----------
+  // Spotify's rate limiter works on a rolling window: sending more requests while a 429 is in force
+  // keeps the window from ever clearing, so the app has to actually stop, not just slow down.
+  let rateLimitedUntil = 0;
+  const sleepUntil = (t) => new Promise((r) => setTimeout(r, Math.max(0, t - Date.now())));
+
   async function api(path, opts = {}) {
     const token = await getToken();
     if (!token) return null;
+    if (Date.now() < rateLimitedUntil) {
+      // Background work waits it out; the once-a-second poll passes noWait so the UI never blocks.
+      if (opts.noWait) return { rateLimited: true };
+      await sleepUntil(rateLimitedUntil);
+    }
     const r = await fetch('https://api.spotify.com/v1' + path, {
       ...opts, headers: { Authorization: 'Bearer ' + token, ...(opts.headers || {}) },
     });
     if (r.status === 204) return { empty: true };
     if (r.status === 401) { logout(); return null; }
-    if (r.status === 429) { el.status.textContent = 'Spotify rate limit, slowing down'; return null; }
+    if (r.status === 429) {
+      const ra = parseInt(r.headers.get('Retry-After') || '', 10);
+      rateLimitedUntil = Date.now() + (isFinite(ra) ? ra + 1 : 10) * 1000;
+      return { rateLimited: true };
+    }
     if (!r.ok) { let j = {}; try { j = await r.json(); } catch {} throw new Error(j.error?.message || ('HTTP ' + r.status)); }
     const t = await r.text();
     return t ? JSON.parse(t) : { empty: true };
@@ -615,9 +629,11 @@
     if (!token) { el.dot.classList.remove('on'); return; }
     try {
       const t0 = performance.now();
-      const s = await api('/me/player');
+      const s = await api('/me/player', { noWait: true });
       const rtt = performance.now() - t0;
       el.dot.classList.add('on');
+      // A rate limit is not "nothing playing" — say so, and leave the last known track on screen.
+      if (s && s.rateLimited) return;
       if (!s || s.empty || !s.item) {
         playing = false;
         if (track) { track = null; renderForTrack(); }
@@ -644,7 +660,28 @@
       }
     } catch (e) { el.status.textContent = e.message; }
   }
-  setInterval(poll, 1000);
+  // Self-scheduling instead of a fixed interval, so the app can actually stand down:
+  //   · hidden tab  → no requests at all (the local clock keeps the lyrics moving; a poll on return re-syncs)
+  //   · paused/idle → every 5 s, since nothing is moving
+  //   · playing     → every 1 s, as before
+  //   · rate limited→ nothing until Spotify's Retry-After has elapsed, with a visible countdown
+  async function pollLoop() {
+    let delay = 1000;
+    if (document.hidden) {
+      delay = 2000;
+    } else if (Date.now() < rateLimitedUntil) {
+      const left = Math.ceil((rateLimitedUntil - Date.now()) / 1000);
+      el.status.textContent = `Spotify rate limit — waiting ${left}s`;
+      delay = 1000;
+    } else {
+      await poll();
+      delay = playing ? 1000 : 5000;
+    }
+    setTimeout(pollLoop, delay);
+  }
+  pollLoop();
+  // Coming back to the tab should re-sync immediately rather than waiting out the loop's delay.
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && Date.now() >= rateLimitedUntil) poll(); });
 
   $('btnPlayPause').onclick = async () => {
     if (demoTimer) { demoPlaying = !demoPlaying; el.playPause.textContent = demoPlaying ? 'Pause' : 'Play'; if (demoPlaying) demoStart = performance.now() - demoPos; return; }
@@ -879,6 +916,7 @@
       let page;
       try { page = await api(path); }
       catch (e) { throw new Error(/403|Forbidden/.test(e.message) ? 'Spotify only lets this app read playlists you own or collaborate on. Copy the songs into a playlist of your own and use that link.' : e.message); }
+      if (page && page.rateLimited) throw new Error('Spotify rate limit reached. Wait a few minutes and run this again — it will pick up where it left off.');
       if (!page || page.empty || !page.items) throw new Error('Spotify only lets this app read playlists you own or collaborate on. Copy the songs into a playlist of your own and use that link.');
       for (const it of page.items) {
         const t = it.item || it.track;
@@ -990,15 +1028,21 @@
 
   // cached.json: songs that exist only in this browser (auto-fetched while listening, or added here) and are in neither repo file.
   $('btnDownloadCached').onclick = () => {
-    const out = {};
+    const canon = (v) => JSON.stringify(v, (k, val) => (val && typeof val === 'object' && !Array.isArray(val)) ? Object.fromEntries(Object.keys(val).sort().map((kk) => [kk, val[kk]])) : val);
+    const out = {}, onlyHere = [], differ = [];
     for (const [id, s] of Object.entries(cacheRead())) {
-      if (!s || !s.lines?.length || repoBase[id] || repoAdded[id]) continue;
-      out[id] = s;
+      if (!s || !s.lines?.length) continue;
+      const repo = repoAdded[id] || repoBase[id];
+      if (!repo) { out[id] = s; onlyHere.push(s.title); }
+      else if (canon(repo) !== canon(s)) { out[id] = s; differ.push(s.title); }
     }
     const n = Object.keys(out).length;
-    if (!n) { plProgress.textContent = 'Nothing cached that is not already in the repo.'; return; }
+    if (!n) { plProgress.textContent = 'Nothing cached that differs from the repo.'; return; }
     downloadText('cached.json', JSON.stringify(out, null, 1), 'application/json');
-    plProgress.textContent = `cached.json: ${n} song${n === 1 ? '' : 's'} only in this browser — ${Object.values(out).map((s) => s.title).join(' · ')}. Paste the entries into songs_added.json.`;
+    plProgress.textContent = `cached.json: ${n} song${n === 1 ? '' : 's'}.` +
+      (onlyHere.length ? ` Only in this browser: ${onlyHere.join(' · ')}.` : '') +
+      (differ.length ? ` Different from the repo version (this browser's copy is what /personal/ shows): ${differ.join(' · ')}.` : '') +
+      ' Paste the entries into songs_added.json, replacing any existing entry with the same ID.';
   };
 
   $('btnDownloadReport').onclick = () => { if (!lastReport) { alert('Run a playlist first.'); return; } downloadText('playlist-report.txt', lastReport); };
@@ -1028,10 +1072,12 @@
     for (const [id, e] of todo) {
       plProgress.textContent = `Fetching lengths for songs not in the playlist: ${done + failed + 1} / ${todo.length}`;
       try {
-        const t = await api('/tracks/' + id);
+        let t = await api('/tracks/' + id);
+        // The call that trips the limit comes back empty; the retry waits out Retry-After before firing.
+        if (t && t.rateLimited) { plProgress.textContent = 'Spotify rate limit — waiting it out…'; t = await api('/tracks/' + id); }
         if (t && t.duration_ms) { e.duration = Math.round(t.duration_ms) / 1000; cacheWrite(id, e); done++; } else failed++;
       } catch (err) { failed++; logRow(`Length failed: ${e.title} — ${err.message}`); }
-      await sleep(350);
+      await sleep(600);
     }
     plProgress.textContent += ` Done: ${done} more lengths added${failed ? `, ${failed} failed` : ''}. Now press "Download songs.json" and commit it.`;
   };
