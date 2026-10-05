@@ -25234,11 +25234,11 @@
       ],
       "source": "lrclib-synced"
   },
-     "6nSQvSGrFykSmDIOetK94r": {
-  "title": "יהיה טוב",
-  "artist": "Jasmin Moallem",
-  "duration": 196.548,
-  "lines": [
+    "6nSQvSGrFykSmDIOetK94r": {
+    "title": "יהיה טוב",
+    "artist": "Jasmin Moallem",
+    "duration": 196.548,
+    "lines": [
    {
     "t": 9.85,
     "he": "בסוף זה רק אני ואתה פה",
@@ -25551,5 +25551,267 @@
    }
   ],
   "source": "lrclib-synced"
- }
+ },
+    "4LuSDzqKAGrogWBCkru4bF": {
+    "title": "מורידים את הירח - Live",
+    "artist": "Eliad",
+    "duration": 291.574,
+    "lines": [
+      {
+        "t": 15.403,
+        "he": "סתם לשבת איתך מול הים",
+        "en": "Just sitting with you by the sea"
+      },
+      {
+        "t": 20.262,
+        "he": "מזמן לא ראינו שמיים, או או או",
+        "en": "It's been ages since we saw the sky, oh oh oh"
+      },
+      {
+        "t": 24.737,
+        "he": "תגידי שמעת מהר זה בעצם לאט",
+        "en": "Tell me, have you heard? Fast is actually slow"
+      },
+      {
+        "t": 28.762,
+        "he": "רחוקים מהבית, או או או",
+        "en": "Far from home, oh oh oh"
+      },
+      {
+        "t": 33.603,
+        "he": "לך יש את כל הקסמים",
+        "en": "You've got all the magic"
+      },
+      {
+        "t": 37.487,
+        "he": "שמלה בלי עקבים",
+        "en": "A dress, no heels"
+      },
+      {
+        "t": 39.629,
+        "he": "מאמי בואי נחלום בגדול",
+        "en": "Baby, let's dream big"
+      },
+      {
+        "t": 43.254,
+        "he": "מי כותב לך בשירים",
+        "en": "Who writes you songs"
+      },
+      {
+        "t": 46.053,
+        "he": "מילים איזה מילים",
+        "en": "Words, what words"
+      },
+      {
+        "t": 48.58,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 50.953,
+        "he": "תגידי איך את עושה לי שמח",
+        "en": "Tell me, how do you make me so happy"
+      },
+      {
+        "t": 55.128,
+        "he": "אין יותר עננים",
+        "en": "There are no more clouds"
+      },
+      {
+        "t": 57.362,
+        "he": "נגמרו הגשמים ושוב אני זורח",
+        "en": "The rains are over, and I'm shining again"
+      },
+      {
+        "t": 60.503,
+        "he": "איך מורידים ת'ירח",
+        "en": "How do you bring down the moon"
+      },
+      {
+        "t": 63.637,
+        "he": "שיפלו כוכבים ככה זה בחיים",
+        "en": "Let the stars fall, that's life"
+      },
+      {
+        "t": 68.37,
+        "he": "או או או או או או או או...",
+        "en": "Oh oh oh oh oh oh oh oh..."
+      },
+      {
+        "t": 71.728,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 73.653,
+        "he": "או או או או או או או או...",
+        "en": "Oh oh oh oh oh oh oh oh..."
+      },
+      {
+        "t": 81.861,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 84.92,
+        "he": "(בואי נחלום בגדול)",
+        "en": "(Let's dream big)"
+      },
+      {
+        "t": 86.061,
+        "he": "יום בואי ניקח לנו יום",
+        "en": "Come on, let's take a day for ourselves"
+      },
+      {
+        "t": 89.087,
+        "he": "זה רק בגלל הרוח או או או",
+        "en": "It's only because of the wind, oh oh oh"
+      },
+      {
+        "t": 93.436,
+        "he": "תראי איזה חום את לידי איזה חום",
+        "en": "Look how hot it is when you're beside me, so hot"
+      },
+      {
+        "t": 97.728,
+        "he": "חיוך שמרוח או או או",
+        "en": "A smile spread across your face, oh oh oh"
+      },
+      {
+        "t": 101.978,
+        "he": "לך יש את כל הקסמים",
+        "en": "You've got all the magic"
+      },
+      {
+        "t": 106.028,
+        "he": "שמלה בלי עקבים",
+        "en": "A dress, no heels"
+      },
+      {
+        "t": 108.319,
+        "he": "מאמי בואי נחלום בגדול",
+        "en": "Baby, let's dream big"
+      },
+      {
+        "t": 111.786,
+        "he": "מי כותב לך בשירים",
+        "en": "Who writes you songs"
+      },
+      {
+        "t": 114.828,
+        "he": "מילים איזה מילים",
+        "en": "Words, what words"
+      },
+      {
+        "t": 116.786,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 119.119,
+        "he": "או, תגידי איך את עושה לי שמח",
+        "en": "Oh, tell me, how do you make me so happy"
+      },
+      {
+        "t": 123.636,
+        "he": "אין יותר עננים",
+        "en": "There are no more clouds"
+      },
+      {
+        "t": 125.694,
+        "he": "נגמרו הגשמים ושוב אני זורח",
+        "en": "The rains are over, and I'm shining again"
+      },
+      {
+        "t": 129.219,
+        "he": "איך מורידים ת'ירח",
+        "en": "How do you bring down the moon"
+      },
+      {
+        "t": 132.144,
+        "he": "שיפלו כוכבים ככה זה בחיים",
+        "en": "Let the stars fall, that's life"
+      },
+      {
+        "t": 137.327,
+        "he": "או או או או או או או או...",
+        "en": "Oh oh oh oh oh oh oh oh..."
+      },
+      {
+        "t": 145.461,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 149.452,
+        "he": "(دعونا نحلم بشكل كبير)",
+        "en": "(Let's dream big)"
+      },
+      {
+        "t": 150.677,
+        "he": "או או או או או או או או...",
+        "en": "Oh oh oh oh oh oh oh oh..."
+      },
+      {
+        "t": 155.303,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 157.611,
+        "he": "(בואי נחלום בגדול)",
+        "en": "(Let's dream big)"
+      },
+      {
+        "t": 158.886,
+        "he": "איך את עושה לי שמח",
+        "en": "How do you make me so happy"
+      },
+      {
+        "t": 213.723,
+        "he": "אין יותר עננים",
+        "en": "There are no more clouds"
+      },
+      {
+        "t": 215.457,
+        "he": "נגמרו הגשמים ושוב אני זורח",
+        "en": "The rains are over, and I'm shining again"
+      },
+      {
+        "t": 219.197,
+        "he": "איך מורידים ת'ירח",
+        "en": "How do you bring down the moon"
+      },
+      {
+        "t": 222.214,
+        "he": "שיפלו כוכבים ככה זה בחיים",
+        "en": "Let the stars fall, that's life"
+      },
+      {
+        "t": 230.023,
+        "he": "או או או או או או או או...",
+        "en": "Oh oh oh oh oh oh oh oh..."
+      },
+      {
+        "t": 237.056,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 239.406,
+        "he": "או או או או או או או או...",
+        "en": "Oh oh oh oh oh oh oh oh..."
+      },
+      {
+        "t": 245.864,
+        "he": "או או או",
+        "en": "Oh oh oh"
+      },
+      {
+        "t": 247.756,
+        "he": "(בואי נחלום בגדול)",
+        "en": "(Let's dream big)"
+      }
+    ]
+  }
 }
