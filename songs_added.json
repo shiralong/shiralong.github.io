@@ -26530,138 +26530,285 @@
     "artist": "Ben Zur",
     "duration": 182.064,
     "lines": [
-   {
-    "t": 16.75,
-    "he": "במיטתי כבר שבועות ביקשתי את שאהבה נפשי ולא מצאתיו",
-    "en": "For weeks now, in my bed, I sought him whom my soul loves, but I did not find him"
-   },
-   {
-    "t": 24.51,
-    "he": "חיפשתי בין כל רחובות העיר העמוסה שקרים הזאת ולא מצאתיו",
-    "en": "I searched through every street of this city crowded with lies, but I did not find him"
-   },
-   {
-    "t": 32.28,
-    "he": "מצאוני השומרים הסובבים בעיר, אך אהובי - כמעט ולא מצאתי אותו",
-    "en": "The watchmen who patrol the city found me, but my beloved—I barely found him"
-   },
-   {
-    "t": 39.73,
-    "he": "אך לא ארפה ממנו עד שאביאו אל תוך עירי",
-    "en": "But I will not let him go until I bring him into my city"
-   },
-   {
-    "t": 43.79,
-    "he": "אל בית אימי ואל חדרי, אל מיטתי",
-    "en": "To my mother’s house and to my room, to my bed"
-   },
-   {
-    "t": 48.93,
-    "he": "הינך יפה רעייתי ושפתותייך חוט שני",
-    "en": "Behold, you are beautiful, my love, and your lips are a scarlet thread"
-   },
-   {
-    "t": 53.02,
-    "he": "שינייך לבנות כמו אור הלבנה",
-    "en": "Your teeth are white as the light of the moon"
-   },
-   {
-    "t": 56.17,
-    "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
-    "en": "Who is this rising from the desert, from a distant land"
-   },
-   {
-    "t": 59.49,
-    "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
-    "en": "Carried on the wing of a great bird, she came to my home"
-   },
-   {
-    "t": 73.3,
-    "he": "במיטתי כבר שבועות ביקשתי את שאהבה נפשי ולא מצאתיו",
-    "en": "For weeks now, in my bed, I sought him whom my soul loves, but I did not find him"
-   },
-   {
-    "t": 81.11,
-    "he": "חיפשתי בין כל רחובות העיר העמוסה שקרים הזאת ולא מצאתיו",
-    "en": "I searched through every street of this city crowded with lies, but I did not find him"
-   },
-   {
-    "t": 89.02,
-    "he": "מצאוני השומרים הסובבים בעיר, אך אהובי - כמעט ולא מצאתי אותו",
-    "en": "The watchmen who patrol the city found me, but my beloved—I barely found him"
-   },
-   {
-    "t": 96.52,
-    "he": "אך לא ארפה ממנו עד שאביאו אל תוך עירי",
-    "en": "But I will not let him go until I bring him into my city"
-   },
-   {
-    "t": 100.4,
-    "he": "אל בית אימי ואל חדרי, אל מיטתי",
-    "en": "To my mother’s house and to my room, to my bed"
-   },
-   {
-    "t": 105.59,
-    "he": "הינך יפה רעייתי ושפתותייך חוט שני",
-    "en": "Behold, you are beautiful, my love, and your lips are a scarlet thread"
-   },
-   {
-    "t": 109.76,
-    "he": "שינייך לבנות כמו אור הלבנה",
-    "en": "Your teeth are white as the light of the moon"
-   },
-   {
-    "t": 112.96,
-    "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
-    "en": "Who is this rising from the desert, from a distant land"
-   },
-   {
-    "t": 116.14,
-    "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
-    "en": "Carried on the wing of a great bird, she came to my home"
-   },
-   {
-    "t": 121.81,
-    "he": "הינך יפה רעייתי, אני נגנב משתי עינייך",
-    "en": "Behold, you are beautiful, my love, I’m captivated by your two eyes"
-   },
-   {
-    "t": 125.97,
-    "he": "ששורפות אותי כאש הלהבה",
-    "en": "That burn me like a blazing fire"
-   },
-   {
-    "t": 128.92,
-    "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
-    "en": "Who is this rising from the desert, from a distant land"
-   },
-   {
-    "t": 132.22,
-    "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
-    "en": "Carried on the wing of a great bird, she came to my home"
-   },
-   {
-    "t": 154.14,
-    "he": "הינך יפה רעייתי, אני נגנב משתי עינייך",
-    "en": "Behold, you are beautiful, my love, I’m captivated by your two eyes"
-   },
-   {
-    "t": 158.24,
-    "he": "ששורפות אותי כאש הלהבה",
-    "en": "That burn me like a blazing fire"
-   },
-   {
-    "t": 161.31,
-    "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
-    "en": "Who is this rising from the desert, from a distant land"
-   },
-   {
-    "t": 164.65,
-    "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
-    "en": "Carried on the wing of a great bird, she came to my home"
-   }
-  ],
-  "source": "lrclib-synced"
- }
+       {
+        "t": 16.75,
+        "he": "במיטתי כבר שבועות ביקשתי את שאהבה נפשי ולא מצאתיו",
+        "en": "For weeks now, in my bed, I sought him whom my soul loves, but I did not find him"
+       },
+       {
+        "t": 24.51,
+        "he": "חיפשתי בין כל רחובות העיר העמוסה שקרים הזאת ולא מצאתיו",
+        "en": "I searched through every street of this city crowded with lies, but I did not find him"
+       },
+       {
+        "t": 32.28,
+        "he": "מצאוני השומרים הסובבים בעיר, אך אהובי - כמעט ולא מצאתי אותו",
+        "en": "The watchmen who patrol the city found me, but my beloved—I barely found him"
+       },
+       {
+        "t": 39.73,
+        "he": "אך לא ארפה ממנו עד שאביאו אל תוך עירי",
+        "en": "But I will not let him go until I bring him into my city"
+       },
+       {
+        "t": 43.79,
+        "he": "אל בית אימי ואל חדרי, אל מיטתי",
+        "en": "To my mother’s house and to my room, to my bed"
+       },
+       {
+        "t": 48.93,
+        "he": "הינך יפה רעייתי ושפתותייך חוט שני",
+        "en": "Behold, you are beautiful, my love, and your lips are a scarlet thread"
+       },
+       {
+        "t": 53.02,
+        "he": "שינייך לבנות כמו אור הלבנה",
+        "en": "Your teeth are white as the light of the moon"
+       },
+       {
+        "t": 56.17,
+        "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
+        "en": "Who is this rising from the desert, from a distant land"
+       },
+       {
+        "t": 59.49,
+        "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
+        "en": "Carried on the wing of a great bird, she came to my home"
+       },
+       {
+        "t": 73.3,
+        "he": "במיטתי כבר שבועות ביקשתי את שאהבה נפשי ולא מצאתיו",
+        "en": "For weeks now, in my bed, I sought him whom my soul loves, but I did not find him"
+       },
+       {
+        "t": 81.11,
+        "he": "חיפשתי בין כל רחובות העיר העמוסה שקרים הזאת ולא מצאתיו",
+        "en": "I searched through every street of this city crowded with lies, but I did not find him"
+       },
+       {
+        "t": 89.02,
+        "he": "מצאוני השומרים הסובבים בעיר, אך אהובי - כמעט ולא מצאתי אותו",
+        "en": "The watchmen who patrol the city found me, but my beloved—I barely found him"
+       },
+       {
+        "t": 96.52,
+        "he": "אך לא ארפה ממנו עד שאביאו אל תוך עירי",
+        "en": "But I will not let him go until I bring him into my city"
+       },
+       {
+        "t": 100.4,
+        "he": "אל בית אימי ואל חדרי, אל מיטתי",
+        "en": "To my mother’s house and to my room, to my bed"
+       },
+       {
+        "t": 105.59,
+        "he": "הינך יפה רעייתי ושפתותייך חוט שני",
+        "en": "Behold, you are beautiful, my love, and your lips are a scarlet thread"
+       },
+       {
+        "t": 109.76,
+        "he": "שינייך לבנות כמו אור הלבנה",
+        "en": "Your teeth are white as the light of the moon"
+       },
+       {
+        "t": 112.96,
+        "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
+        "en": "Who is this rising from the desert, from a distant land"
+       },
+       {
+        "t": 116.14,
+        "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
+        "en": "Carried on the wing of a great bird, she came to my home"
+       },
+       {
+        "t": 121.81,
+        "he": "הינך יפה רעייתי, אני נגנב משתי עינייך",
+        "en": "Behold, you are beautiful, my love, I’m captivated by your two eyes"
+       },
+       {
+        "t": 125.97,
+        "he": "ששורפות אותי כאש הלהבה",
+        "en": "That burn me like a blazing fire"
+       },
+       {
+        "t": 128.92,
+        "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
+        "en": "Who is this rising from the desert, from a distant land"
+       },
+       {
+        "t": 132.22,
+        "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
+        "en": "Carried on the wing of a great bird, she came to my home"
+       },
+       {
+        "t": 154.14,
+        "he": "הינך יפה רעייתי, אני נגנב משתי עינייך",
+        "en": "Behold, you are beautiful, my love, I’m captivated by your two eyes"
+       },
+       {
+        "t": 158.24,
+        "he": "ששורפות אותי כאש הלהבה",
+        "en": "That burn me like a blazing fire"
+       },
+       {
+        "t": 161.31,
+        "he": "מי זאת עולה מן המדבר, מארץ רחוקה",
+        "en": "Who is this rising from the desert, from a distant land"
+       },
+       {
+        "t": 164.65,
+        "he": "נישאת על כנף ציפור גדולה, הגיעה לביתי",
+        "en": "Carried on the wing of a great bird, she came to my home"
+       }
+    ],
+    "source": "lrclib-synced"
+  },
+    "5tZC7Y6L9ePkGcZriHRttA": {
+    "title": "שלוותה",
+    "artist": "Ofek Hamalach",
+    "duration": 173.076,
+    "lines": [
+      {
+        "t": 10.318,
+        "he": "היא אוהבת ת׳בריזה",
+        "en": "She loves the breeze"
+      },
+      {
+        "t": 13.818,
+        "he": "שעושים לה עיניים",
+        "en": "When they make eyes at her"
+      },
+      {
+        "t": 16.127,
+        "he": "שהגוף שלה זז עם השיר שלי תחת כיפת השמיים",
+        "en": "The way her body moves to my song beneath the open sky"
+      },
+      {
+        "t": 20.802,
+        "he": "איך הקיץ יפה לה",
+        "en": "How good summer looks on her"
+      },
+      {
+        "t": 23.002,
+        "he": "מרגישים את הווייבים",
+        "en": "You can feel the vibes"
+      },
+      {
+        "t": 25.768,
+        "he": "אז לקחתי לי שלוק מהיופי שלה והרמתי לחיים",
+        "en": "So I took a sip of her beauty and raised a toast"
+      },
+      {
+        "t": 30.076,
+        "he": "הלילה אני בא להרים לך מסיבה",
+        "en": "Tonight I’m coming to throw you a party"
+      },
+      {
+        "t": 37.226,
+        "he": "היא חולה על השלוותה וואלה בית משוגעים",
+        "en": "She’s crazy about Shalvata—wallah, it’s a madhouse"
+      },
+      {
+        "t": 42.776,
+        "he": "אם תפתח לה את הסטורי היא תמכור רק חיוכים",
+        "en": "Open up her story and all she’ll sell you is smiles"
+      },
+      {
+        "t": 48.002,
+        "he": "מאמי כל שישי שבת",
+        "en": "Baby, every Friday and Saturday"
+      },
+      {
+        "t": 50.501,
+        "he": "זה רק אני ואת",
+        "en": "It’s just you and me"
+      },
+      {
+        "t": 52.826,
+        "he": "כמה טוב שבאת",
+        "en": "I’m so glad you came"
+      },
+      {
+        "t": 55.118,
+        "he": "עד אליי, עד אליי",
+        "en": "All the way to me, all the way to me"
+      },
+      {
+        "t": 57.552,
+        "he": "הטמפרטורה חמה בקצב אקזוטי",
+        "en": "The temperature is hot to an exotic beat"
+      },
+      {
+        "t": 71.959,
+        "he": "היא עולה ועולה כמה בא לי עליה היא בדיוק כמוני",
+        "en": "She rises and rises, I want her so bad—she’s just like me"
+      },
+      {
+        "t": 76.226,
+        "he": "היא כל כך מהממת, מאוהב בה על אמת",
+        "en": "She’s so stunning, I’m truly in love with her"
+      },
+      {
+        "t": 81.384,
+        "he": "בכל הזדמנות שתהיה לי בסוף היא תהיה החותמת",
+        "en": "Every chance I get, she’ll have the final say"
+      },
+      {
+        "t": 85.443,
+        "he": "הלילה אני בא להרים לך מסיבה",
+        "en": "Tonight I’m coming to throw you a party"
+      },
+      {
+        "t": 92.926,
+        "he": "היא חולה על השלוותה וואלה בית משוגעים",
+        "en": "She’s crazy about Shalvata—wallah, it’s a madhouse"
+      },
+      {
+        "t": 98.259,
+        "he": "אם תפתח לה את הסטורי היא תמכור רק חיוכים",
+        "en": "Open up her story and all she’ll sell you is smiles"
+      },
+      {
+        "t": 103.643,
+        "he": "מאמי כל שישי שבת",
+        "en": "Baby, every Friday and Saturday"
+      },
+      {
+        "t": 105.926,
+        "he": "זה רק אני ואת",
+        "en": "It’s just you and me"
+      },
+      {
+        "t": 108.301,
+        "he": "כמה טוב שבאת",
+        "en": "I’m so glad you came"
+      },
+      {
+        "t": 110.593,
+        "he": "עד אליי, עד אליי",
+        "en": "All the way to me, all the way to me"
+      },
+      {
+        "t": 113.368,
+        "he": "נכנסת לבר היא אחת למליון",
+        "en": "She walks into the bar, she’s one in a million"
+      },
+      {
+        "t": 133.526,
+        "he": "עם הג׳ינס הקצר היא חולת רגאטון",
+        "en": "In her short jeans, she’s crazy about reggaeton"
+      },
+      {
+        "t": 135.717,
+        "he": "בלי כל הפוזה ובלי הפאסון עולה עולה",
+        "en": "No posing and no airs, she rises, rises"
+      },
+      {
+        "t": 140.392,
+        "he": "כי יש לה כל מה שביקשתי, כל מה שרציתי",
+        "en": "Because she has everything I asked for, everything I wanted"
+      }
+    ]
+  }
 
 }
