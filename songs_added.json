@@ -25051,185 +25051,503 @@
       }
     ]
   },
-   "1sewBAAhgIwQyK2xQ3DRo9": {
-  "title": "איתך",
-  "artist": "Eden Hason",
-  "duration": 163.158,
+    "1sewBAAhgIwQyK2xQ3DRo9": {
+    "title": "איתך",
+    "artist": "Eden Hason",
+    "duration": 163.158,
+    "lines": [
+       {
+        "t": 10.82,
+        "he": "זהו רבע שעה של שיגעון",
+        "en": "This is fifteen minutes of madness"
+       },
+       {
+        "t": 15.29,
+        "he": "מתהפך לי במיטה הלילה אין מצב לישון",
+        "en": "I'm tossing and turning in bed, there's no way I'll sleep tonight"
+       },
+       {
+        "t": 19.07,
+        "he": "אז יצאתי מהחדר לסלון",
+        "en": "So I left the bedroom for the living room"
+       },
+       {
+        "t": 21.45,
+        "he": "ושיגעון ושיגעון, שיגעון",
+        "en": "And madness, and madness, madness"
+       },
+       {
+        "t": 25.44,
+        "he": "את נמצאת עכשיו כמה שעות ממני",
+        "en": "You're a few hours away from me now"
+       },
+       {
+        "t": 28.01,
+        "he": "וסרטים, רק סרטים רעים אוכל בראש",
+        "en": "And scenarios, only bad scenarios running through my head"
+       },
+       {
+        "t": 31.65,
+        "he": "מעצבנת חזקה יותר ממני",
+        "en": "You're annoying, stronger than me"
+       },
+       {
+        "t": 34.2,
+        "he": "לא דיברנו כבר יומיים, זה מרגיש לי כמו שלוש",
+        "en": "We haven't spoken in two days, but it feels like three"
+       },
+       {
+        "t": 39.68,
+        "he": "אנלא מוצא תשקט קר לי",
+        "en": "I can't find any peace, I'm cold"
+       },
+       {
+        "t": 43.56,
+        "he": "כל השמיכות לקחת איתך",
+        "en": "You took all the blankets with you"
+       },
+       {
+        "t": 46.78,
+        "he": "אני אוהב אותך ולא אכפת לי",
+        "en": "I love you, and I don't care"
+       },
+       {
+        "t": 49.84,
+        "he": "תביני רע לי (כשאנלא)",
+        "en": "You have to understand, I feel awful (when I'm not)"
+       },
+       {
+        "t": 52.98,
+        "he": "איתך, איתך, איתך",
+        "en": "With you, with you, with you"
+       },
+       {
+        "t": 58.82,
+        "he": "איתך, איתך, איתך",
+        "en": "With you, with you, with you"
+       },
+       {
+        "t": 67.25,
+        "he": "זה רק רבע שעה של שגעון",
+        "en": "It's only fifteen minutes of madness"
+       },
+       {
+        "t": 70.96,
+        "he": "שתה כוס מים תרגע ואז תחזור מהר לישון",
+        "en": "Drink a glass of water, calm down, then hurry back to sleep"
+       },
+       {
+        "t": 74.82,
+        "he": "עוד עשן עוד מבט מהחלון",
+        "en": "Another puff of smoke, another glance out the window"
+       },
+       {
+        "t": 77.55,
+        "he": "קצת הגיון קצת הגיון קצת הגיון",
+        "en": "A little reason, a little reason, a little reason"
+       },
+       {
+        "t": 81.26,
+        "he": "יש לי לב חכם הוא לא קונה תחרטות",
+        "en": "I've got a smart heart; it doesn't buy into regrets"
+       },
+       {
+        "t": 84.13,
+        "he": "אף אחת לא עושה לי טוב יותר ממך",
+        "en": "No one makes me feel better than you do"
+       },
+       {
+        "t": 87.88,
+        "he": "אז ביטלתי אחרי שחסמתי",
+        "en": "So I undid it after I blocked you"
+       },
+       {
+        "t": 89.44,
+        "he": "והסתכלתי על מה שהפסדתי",
+        "en": "And looked at what I'd lost"
+       },
+       {
+        "t": 91.09,
+        "he": "נגעתי נסעתי ושלחתי לך ש",
+        "en": "I touched, I drove, and sent you a sh—"
+       },
+       {
+        "t": 94.72,
+        "he": "אנלא מוצא תשקט קר לי",
+        "en": "I can't find any peace, I'm cold"
+       },
+       {
+        "t": 98.04,
+        "he": "כל השמיכות לקחת איתך",
+        "en": "You took all the blankets with you"
+       },
+       {
+        "t": 101.38,
+        "he": "אני אוהב אותך ולא אכפת לי",
+        "en": "I love you, and I don't care"
+       },
+       {
+        "t": 104.35,
+        "he": "תביני רע לי, כשאנלא",
+        "en": "You have to understand, I feel awful when I'm not"
+       },
+       {
+        "t": 107.63,
+        "he": "איתך, איתך, איתך",
+        "en": "With you, with you, with you"
+       },
+       {
+        "t": 112.93,
+        "he": "איתך, איתך, איתך",
+        "en": "With you, with you, with you"
+       },
+       {
+        "t": 126.78,
+        "he": "אנלא מוצא תשקט קר לי",
+        "en": "I can't find any peace, I'm cold"
+       },
+       {
+        "t": 136.45,
+        "he": "כל השמיכות לקחת איתך",
+        "en": "You took all the blankets with you"
+       },
+       {
+        "t": 139.65,
+        "he": "אני אוהב אותך ולא אכפת לי",
+        "en": "I love you, and I don't care"
+       },
+       {
+        "t": 142.77,
+        "he": "תביני רע לי, כשאנלא",
+        "en": "You have to understand, I feel awful when I'm not"
+       },
+       {
+        "t": 146.02,
+        "he": "איתך, איתך, איתך",
+        "en": "With you, with you, with you"
+       },
+       {
+        "t": 149.81,
+        "he": "איתך, איתך, איתך",
+        "en": "With you, with you, with you"
+       }
+      ],
+      "source": "lrclib-synced"
+  },
+     "6nSQvSGrFykSmDIOetK94r": {
+  "title": "יהיה טוב",
+  "artist": "Jasmin Moallem",
+  "duration": 196.548,
   "lines": [
    {
-    "t": 10.82,
-    "he": "זהו רבע שעה של שיגעון",
-    "en": "This is fifteen minutes of madness"
+    "t": 9.85,
+    "he": "בסוף זה רק אני ואתה פה",
+    "en": "In the end, it's just you and me here"
    },
    {
-    "t": 15.29,
-    "he": "מתהפך לי במיטה הלילה אין מצב לישון",
-    "en": "I'm tossing and turning in bed, there's no way I'll sleep tonight"
+    "t": 12.06,
+    "he": "בסוף היום בשקט באוטו",
+    "en": "At the end of the day, quietly in the car"
    },
    {
-    "t": 19.07,
-    "he": "אז יצאתי מהחדר לסלון",
-    "en": "So I left the bedroom for the living room"
+    "t": 14.4,
+    "he": "החדשות עברו ליד האוזן",
+    "en": "The news went in one ear and out the other"
    },
    {
-    "t": 21.45,
-    "he": "ושיגעון ושיגעון, שיגעון",
-    "en": "And madness, and madness, madness"
+    "t": 16.68,
+    "he": "ואמרנו תודה על עוד יום",
+    "en": "And we said thank you for another day"
    },
    {
-    "t": 25.44,
-    "he": "את נמצאת עכשיו כמה שעות ממני",
-    "en": "You're a few hours away from me now"
+    "t": 18.41,
+    "he": "לא מנסים לכבוש את העולם",
+    "en": "We're not trying to conquer the world"
    },
    {
-    "t": 28.01,
-    "he": "וסרטים, רק סרטים רעים אוכל בראש",
-    "en": "And scenarios, only bad scenarios running through my head"
+    "t": 20.69,
+    "he": "רק לנקות את הלב מהאבק",
+    "en": "Just to clear the dust from our hearts"
    },
    {
-    "t": 31.65,
-    "he": "מעצבנת חזקה יותר ממני",
-    "en": "You're annoying, stronger than me"
+    "t": 23.67,
+    "he": "עוצרים בצד הדרך",
+    "en": "We pull over by the roadside"
    },
    {
-    "t": 34.2,
-    "he": "לא דיברנו כבר יומיים, זה מרגיש לי כמו שלוש",
-    "en": "We haven't spoken in two days, but it feels like three"
+    "t": 24.65,
+    "he": "מסתכל לי בעיניים כשאני אומרת",
+    "en": "You look me in the eyes when I say"
    },
    {
-    "t": 39.68,
-    "he": "אנלא מוצא תשקט קר לי",
-    "en": "I can't find any peace, I'm cold"
+    "t": 28.29,
+    "he": "גם אם יישרף הכסף",
+    "en": "Even if all the money goes up in flames"
    },
    {
-    "t": 43.56,
-    "he": "כל השמיכות לקחת איתך",
-    "en": "You took all the blankets with you"
+    "t": 30.5,
+    "he": "נשב ונצחק במרפסת",
+    "en": "We'll sit and laugh on the balcony"
    },
    {
-    "t": 46.78,
-    "he": "אני אוהב אותך ולא אכפת לי",
-    "en": "I love you, and I don't care"
+    "t": 32.74,
+    "he": "אני ואתה והשקט",
+    "en": "You and me and the silence"
    },
    {
-    "t": 49.84,
-    "he": "תביני רע לי (כשאנלא)",
-    "en": "You have to understand, I feel awful (when I'm not)"
+    "t": 34.91,
+    "he": "לא צריך כלום, קרן שמש",
+    "en": "We don't need a thing, just a ray of sunshine"
    },
    {
-    "t": 52.98,
-    "he": "איתך, איתך, איתך",
-    "en": "With you, with you, with you"
+    "t": 37.57,
+    "he": "גם אם ייקח לנו זמן",
+    "en": "Even if it takes us time"
    },
    {
-    "t": 58.82,
-    "he": "איתך, איתך, איתך",
-    "en": "With you, with you, with you"
+    "t": 39.79,
+    "he": "תראה שהכל מכוון",
+    "en": "You'll see that everything is meant to be"
    },
    {
-    "t": 67.25,
-    "he": "זה רק רבע שעה של שגעון",
-    "en": "It's only fifteen minutes of madness"
+    "t": 42.17,
+    "he": "נשב מסביב לשולחן, מבטיחה ש",
+    "en": "We'll sit around the table, I promise that"
    },
    {
-    "t": 70.96,
-    "he": "שתה כוס מים תרגע ואז תחזור מהר לישון",
-    "en": "Drink a glass of water, calm down, then hurry back to sleep"
+    "t": 45.7,
+    "he": "בסוף יהיה, יהיה טוב",
+    "en": "In the end, it'll, it'll be all right"
    },
    {
-    "t": 74.82,
-    "he": "עוד עשן עוד מבט מהחלון",
-    "en": "Another puff of smoke, another glance out the window"
+    "t": 52.34,
+    "he": "הפרחים ישובו לפרוח",
+    "en": "The flowers will bloom again"
    },
    {
-    "t": 77.55,
-    "he": "קצת הגיון קצת הגיון קצת הגיון",
-    "en": "A little reason, a little reason, a little reason"
+    "t": 54.2,
+    "he": "תראה שיהיה טוב",
+    "en": "You'll see, it'll be all right"
    },
    {
-    "t": 81.26,
-    "he": "יש לי לב חכם הוא לא קונה תחרטות",
-    "en": "I've got a smart heart; it doesn't buy into regrets"
+    "t": 56.92,
+    "he": "יהיה טוב",
+    "en": "It'll be all right"
    },
    {
-    "t": 84.13,
-    "he": "אף אחת לא עושה לי טוב יותר ממך",
-    "en": "No one makes me feel better than you do"
+    "t": 59.6,
+    "he": "גם אם יש עוד דרך לעבור",
+    "en": "Even if there's still a road ahead"
    },
    {
-    "t": 87.88,
-    "he": "אז ביטלתי אחרי שחסמתי",
-    "en": "So I undid it after I blocked you"
+    "t": 64.21,
+    "he": "בסוף יהיה, יהיה טוב",
+    "en": "In the end, it'll, it'll be all right"
    },
    {
-    "t": 89.44,
-    "he": "והסתכלתי על מה שהפסדתי",
-    "en": "And looked at what I'd lost"
+    "t": 70.73,
+    "he": "הפרחים ישובו לפרוח",
+    "en": "The flowers will bloom again"
    },
    {
-    "t": 91.09,
-    "he": "נגעתי נסעתי ושלחתי לך ש",
-    "en": "I touched, I drove, and sent you a sh—"
+    "t": 72.7,
+    "he": "תראה שיהיה טוב",
+    "en": "You'll see, it'll be all right"
    },
    {
-    "t": 94.72,
-    "he": "אנלא מוצא תשקט קר לי",
-    "en": "I can't find any peace, I'm cold"
+    "t": 75.43,
+    "he": "יהיה טוב",
+    "en": "It'll be all right"
    },
    {
-    "t": 98.04,
-    "he": "כל השמיכות לקחת איתך",
-    "en": "You took all the blankets with you"
+    "t": 78.15,
+    "he": "גם מתוך החושך יידלק האור",
+    "en": "Even out of the darkness, the light will shine"
    },
    {
-    "t": 101.38,
-    "he": "אני אוהב אותך ולא אכפת לי",
-    "en": "I love you, and I don't care"
+    "t": 83.5,
+    "he": "בסוף זה רק אנחנו בחדר",
+    "en": "In the end, it's just us in the room"
    },
    {
-    "t": 104.35,
-    "he": "תביני רע לי, כשאנלא",
-    "en": "You have to understand, I feel awful when I'm not"
+    "t": 85.82,
+    "he": "מה עברנו בשנה זה כמו עשר",
+    "en": "What we've been through this year feels like ten"
    },
    {
-    "t": 107.63,
-    "he": "איתך, איתך, איתך",
-    "en": "With you, with you, with you"
+    "t": 88.12,
+    "he": "לא זה לא במילים זה התדר",
+    "en": "No, it's not in the words, it's the vibe"
    },
    {
-    "t": 112.93,
-    "he": "איתך, איתך, איתך",
-    "en": "With you, with you, with you"
+    "t": 90.55,
+    "he": "ניסיתי לעשות לנו סדר",
+    "en": "I tried to put things in order for us"
    },
    {
-    "t": 126.78,
-    "he": "אנלא מוצא תשקט קר לי",
-    "en": "I can't find any peace, I'm cold"
+    "t": 92.62,
+    "he": "לפעמים רואים רק את הסדק",
+    "en": "Sometimes all you see is the crack"
    },
    {
-    "t": 136.45,
-    "he": "כל השמיכות לקחת איתך",
-    "en": "You took all the blankets with you"
+    "t": 95.27,
+    "he": "נמצא את הדרך בלי נדר",
+    "en": "We'll find the way, no promises"
    },
    {
-    "t": 139.65,
-    "he": "אני אוהב אותך ולא אכפת לי",
-    "en": "I love you, and I don't care"
+    "t": 97.21,
+    "he": "הזמן טס כל כך מהר",
+    "en": "Time flies so fast"
    },
    {
-    "t": 142.77,
-    "he": "תביני רע לי, כשאנלא",
-    "en": "You have to understand, I feel awful when I'm not"
+    "t": 98.5,
+    "he": "אנחנו בטח לא נזכור את מה שאין, רק מה שכן",
+    "en": "We probably won't remember what we lacked, only what we had"
    },
    {
-    "t": 146.02,
-    "he": "איתך, איתך, איתך",
-    "en": "With you, with you, with you"
+    "t": 101.95,
+    "he": "אפשר לעזוב את העיר",
+    "en": "We can leave the city"
    },
    {
-    "t": 149.81,
-    "he": "איתך, איתך, איתך",
-    "en": "With you, with you, with you"
+    "t": 104.39,
+    "he": "נסע על הכביש המהיר",
+    "en": "We'll drive down the highway"
+   },
+   {
+    "t": 106.59,
+    "he": "העתיד תמיד מזהיר",
+    "en": "The future always looks bright"
+   },
+   {
+    "t": 108.55,
+    "he": "לא צריך כלום, רק אוויר",
+    "en": "We don't need a thing, just air"
+   },
+   {
+    "t": 111.14,
+    "he": "נמצא איזה אוהל שבור",
+    "en": "We'll find some broken-down tent"
+   },
+   {
+    "t": 113.65,
+    "he": "נחיה שם כאילו ברור",
+    "en": "We'll live there as if it's obvious"
+   },
+   {
+    "t": 115.75,
+    "he": "שמדובר בארמון רק תזכור",
+    "en": "That it's a palace—just remember"
+   },
+   {
+    "t": 119.15,
+    "he": "שבסוף יהיה, יהיה טוב",
+    "en": "That in the end, it'll, it'll be all right"
+   },
+   {
+    "t": 126.08,
+    "he": "הפרחים ישובו לפרוח",
+    "en": "The flowers will bloom again"
+   },
+   {
+    "t": 127.94,
+    "he": "תראה שיהיה טוב (יהיה טוב)",
+    "en": "You'll see, it'll be all right (it'll be all right)"
+   },
+   {
+    "t": 130.62,
+    "he": "יהיה טוב (יהיה טוב)",
+    "en": "It'll be all right (it'll be all right)"
+   },
+   {
+    "t": 133.17,
+    "he": "גם אם יש עוד דרך לעבור",
+    "en": "Even if there's still a road ahead"
+   },
+   {
+    "t": 137.83,
+    "he": "בסוף יהיה, יהיה טוב",
+    "en": "In the end, it'll, it'll be all right"
+   },
+   {
+    "t": 144.43,
+    "he": "הפרחים ישובו לפרוח",
+    "en": "The flowers will bloom again"
+   },
+   {
+    "t": 146.44,
+    "he": "תראה שיהיה טוב (יהיה טוב)",
+    "en": "You'll see, it'll be all right (it'll be all right)"
+   },
+   {
+    "t": 149.37,
+    "he": "יהיה טוב (יהיה טוב)",
+    "en": "It'll be all right (it'll be all right)"
+   },
+   {
+    "t": 151.58,
+    "he": "גם מתוך החושך יידלק האור",
+    "en": "Even out of the darkness, the light will shine"
+   },
+   {
+    "t": 165.6,
+    "he": "אני בטח לא אקח את זה לאט",
+    "en": "I'm sure I won't take it slow"
+   },
+   {
+    "t": 167.79,
+    "he": "אתה בטח לא תחזיק את זה נגדי",
+    "en": "I'm sure you won't hold it against me"
+   },
+   {
+    "t": 169.82,
+    "he": "וזה בטח טוב מדי ועוד מעט",
+    "en": "And this must be too good, and soon"
+   },
+   {
+    "t": 172.22,
+    "he": "יקרה משהו, בטוח זה לא אמיתי",
+    "en": "Something will happen—surely this can't be real"
+   },
+   {
+    "t": 174.59,
+    "he": "אני בטח לא אקח את זה לאט",
+    "en": "I'm sure I won't take it slow"
+   },
+   {
+    "t": 176.98,
+    "he": "אתה בטח לא תחזיק את זה נגדי",
+    "en": "I'm sure you won't hold it against me"
+   },
+   {
+    "t": 179.01,
+    "he": "וזה בטח טוב מדי ועוד מעט",
+    "en": "And this must be too good, and soon"
+   },
+   {
+    "t": 181.5,
+    "he": "יקרה משהו, בטוח זה לא אמיתי",
+    "en": "Something will happen—surely this can't be real"
+   },
+   {
+    "t": 183.86,
+    "he": "אם יקרה לך משהו אני משתגעת",
+    "en": "If anything happens to you, I'll lose my mind"
+   },
+   {
+    "t": 186.03,
+    "he": "אם יקרה לך משהו זה הסוף שלי",
+    "en": "If anything happens to you, that'll be the end of me"
+   },
+   {
+    "t": 188.36,
+    "he": "אם יקרה לך משהו אני משתגעת",
+    "en": "If anything happens to you, I'll lose my mind"
+   },
+   {
+    "t": 190.82,
+    "he": "אם יקרה לך משהו זה הסוף שלי",
+    "en": "If anything happens to you, that'll be the end of me"
    }
   ],
   "source": "lrclib-synced"
