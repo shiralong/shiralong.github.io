@@ -26810,10 +26810,10 @@
       }
     ]
   },
-   "6spkDJlie5raRezVwEDeQK": {
-  "title": "כל עכבה לטובה",
-  "artist": "Ben Zur",
-  "lines": [
+    "6spkDJlie5raRezVwEDeQK": {
+    "title": "כל עכבה לטובה",
+    "artist": "Ben Zur",
+    "lines": [
    {
     "t": 15.16,
     "he": "אני מאמין באמונה שלמה",
@@ -27065,7 +27065,235 @@
     "en": "I am a part of God above"
    }
   ],
-  "source": "lrclib-synced",
-  "duration": 162.088
- }
+    "source": "lrclib-synced",
+    "duration": 162.088
+ },
+    "0x9UM4GuxnMJUjyuipowmo": {
+    "title": "אל תעזבי ידיים",
+    "artist": "Akiva",
+    "duration": 208.5,
+    "lines": [
+       {
+        "t": 10.33,
+        "he": "חלון לים, דירה הכי יפה בעיר",
+        "en": "A window to the sea, the most beautiful apartment in town"
+       },
+       {
+        "t": 12.98,
+        "he": "עוד מחכה למשהו שאת ליבך יעיר",
+        "en": "Still waiting for something to awaken your heart"
+       },
+       {
+        "t": 15.61,
+        "he": "ובינתיים, בדידות מקיר אל קיר",
+        "en": "And meanwhile, loneliness from wall to wall"
+       },
+       {
+        "t": 21.36,
+        "he": "ויום אחד את מחליטה שם לעזוב",
+        "en": "And one day you decide to leave that place"
+       },
+       {
+        "t": 23.75,
+        "he": "רחוק לנסוע כדי להרגיש ת'לב קרוב",
+        "en": "To travel far away, so you can feel your heart close"
+       },
+       {
+        "t": 26.56,
+        "he": "מגיע לך כבר לאהוב",
+        "en": "You deserve to love at last"
+       },
+       {
+        "t": 32.53,
+        "he": "כמה חברים שצחקו לך",
+        "en": "How many friends have laughed at you"
+       },
+       {
+        "t": 34.66,
+        "he": "איך שוב ושוב הם מסבירים לך",
+        "en": "How time and again they explain to you"
+       },
+       {
+        "t": 36.53,
+        "he": "את מחפשת דבר שלא קיים",
+        "en": "You're looking for something that doesn't exist"
+       },
+       {
+        "t": 43.22,
+        "he": "מאחורי הגב אומרים את משוגעת",
+        "en": "Behind your back they say you're crazy"
+       },
+       {
+        "t": 45.94,
+        "he": "אבל בפנים, אין שום ספק, את כבר יודעת",
+        "en": "But deep inside, without a doubt, you already know"
+       },
+       {
+        "t": 48.5,
+        "he": "בוודאי ישנו שם",
+        "en": "Surely he's out there"
+       },
+       {
+        "t": 55.1,
+        "he": "זה לא בשמיים, לא בסוף העולם",
+        "en": "It's not in heaven, not at the end of the world"
+       },
+       {
+        "t": 60.71,
+        "he": "כמה טוב עוד לפנייך",
+        "en": "So much good still lies ahead of you"
+       },
+       {
+        "t": 63.52,
+        "he": "רק אל תעזבי ידיים",
+        "en": "Just don't give up"
+       },
+       {
+        "t": 66.13,
+        "he": "אל תעזבי ידיים",
+        "en": "Don't give up"
+       },
+       {
+        "t": 73.29,
+        "he": "נכון שבלילות את מתבלבלת",
+        "en": "It's true that at night you lose your way"
+       },
+       {
+        "t": 75.58,
+        "he": "סוגרת את הלב ושוב נופלת",
+        "en": "You close your heart and fall again"
+       },
+       {
+        "t": 77.77,
+        "he": "והייאוש הולך ומתגבר",
+        "en": "And the despair keeps growing"
+       },
+       {
+        "t": 84.15,
+        "he": "תדעי ששום דמעה שלך לא נאבדת",
+        "en": "Know that not a single tear of yours is ever lost"
+       },
+       {
+        "t": 87.1,
+        "he": "כל תפילה שלך פותחת איזו דלת",
+        "en": "Every prayer of yours opens some door"
+       },
+       {
+        "t": 89.33,
+        "he": "נשמה רוצה להשתחרר",
+        "en": "A soul longs to break free"
+       },
+       {
+        "t": 94.24,
+        "he": "בוודאי ישנו שם",
+        "en": "Surely he's out there"
+       },
+       {
+        "t": 101.46,
+        "he": "זה לא בשמיים, לא בסוף העולם",
+        "en": "It's not in heaven, not at the end of the world"
+       },
+       {
+        "t": 107.09,
+        "he": "כמה טוב עוד לפנייך",
+        "en": "So much good still lies ahead of you"
+       },
+       {
+        "t": 109.78,
+        "he": "רק אל תעזבי ידיים",
+        "en": "Just don't give up"
+       },
+       {
+        "t": 112.4,
+        "he": "אל תעזבי ידיים",
+        "en": "Don't give up"
+       },
+       {
+        "t": 115.99,
+        "he": "בוודאי ישנו שם",
+        "en": "Surely he's out there"
+       },
+       {
+        "t": 123.46,
+        "he": "זה לא בשמיים, לא בסוף העולם",
+        "en": "It's not in heaven, not at the end of the world"
+       },
+       {
+        "t": 128.84,
+        "he": "כמה טוב עוד לפנייך",
+        "en": "So much good still lies ahead of you"
+       },
+       {
+        "t": 131.8,
+        "he": "רק אל תעזבי ידיים",
+        "en": "Just don't give up"
+       },
+       {
+        "t": 134.39,
+        "he": "אל תעזבי ידיים",
+        "en": "Don't give up"
+       },
+       {
+        "t": 139.53,
+        "he": "רק מול האור אפשר לראות",
+        "en": "Only against the light can you see"
+       },
+       {
+        "t": 145.3,
+        "he": "אותיות שנכתבו לך בדמעות",
+        "en": "Letters written for you in tears"
+       },
+       {
+        "t": 150.36,
+        "he": "הן מספרות לך, הן מספרות",
+        "en": "They tell you, they tell you"
+       },
+       {
+        "t": 156.99,
+        "he": "יש לך מקום",
+        "en": "There is a place for you"
+       },
+       {
+        "t": 172.67,
+        "he": "כמה טוב עוד לפנייך",
+        "en": "So much good still lies ahead of you"
+       },
+       {
+        "t": 175.39,
+        "he": "רק אל תעזבי ידיים",
+        "en": "Just don't give up"
+       },
+       {
+        "t": 178.14,
+        "he": "אל תעזבי ידיים",
+        "en": "Don't give up"
+       },
+       {
+        "t": 181.5,
+        "he": "בוודאי ישנו שם",
+        "en": "Surely he's out there"
+       },
+       {
+        "t": 188.71,
+        "he": "זה לא בשמיים, לא בסוף העולם",
+        "en": "It's not in heaven, not at the end of the world"
+       },
+       {
+        "t": 194.49,
+        "he": "כמה טוב עוד לפנייך",
+        "en": "So much good still lies ahead of you"
+       },
+       {
+        "t": 197.01,
+        "he": "רק אל תעזבי ידיים",
+        "en": "Just don't give up"
+       },
+       {
+        "t": 199.82,
+        "he": "אל תעזבי ידיים",
+        "en": "Don't give up"
+       }
+    ],
+    "source": "lrclib-synced"
+  }
 }
