@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>Shiralong · Hebrew lyrics, live</title>
+<link rel="icon" href="extension/icons/48.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000; --card: #1c1c1e; --ink: #f5f5f7; --ink-2: #98989d; --dim: #48484a;
+    --green: #32d74b; --green-soft: rgba(50,215,75,.14); --line: rgba(255,255,255,.1);
+    --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-he: 'Heebo', -apple-system, 'SF Hebrew', 'Segoe UI', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-en); -webkit-font-smoothing: antialiased; letter-spacing: -.005em; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .hero { text-align: center; margin-bottom: 2rem; }
+  .demo {
+    margin: 0 auto 1.25rem; max-width: 42rem; text-align: center;
+    background: var(--card); border-radius: 22px; padding: 0 1.5rem 1rem; overflow: hidden;
+  }
+  .demo-head { display: flex; align-items: center; gap: .5rem; padding: .9rem 0; border-bottom: 1px solid var(--line); font-size: .85rem; }
+  .demo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+  .demo-title { font-family: var(--font-he); font-weight: 600; color: var(--ink); }
+  .demo-artist { color: var(--ink-2); }
+  .demo-window { position: relative; height: 13.5rem; overflow: hidden; }
+  .demo-window::before, .demo-window::after { content: ''; position: absolute; left: 0; right: 0; height: 1.2rem; z-index: 1; pointer-events: none; }
+  .demo-window::before { top: 0; background: linear-gradient(var(--card), transparent); }
+  .demo-window::after { bottom: 0; background: linear-gradient(transparent, var(--card)); }
+  .demo-track { transition: transform .6s cubic-bezier(.4,0,.2,1); }
+  @media (prefers-reduced-motion: reduce) { .demo-track, .demo .line { transition: none !important; } }
+  .demo .line { height: 4.5rem; display: flex; flex-direction: column; justify-content: center; color: var(--dim); transition: color .35s ease, opacity .35s ease, transform .35s ease; transform: scale(.94); }
+  .demo .he { display: block; direction: rtl; font-family: var(--font-he); font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
+  .demo .en { display: block; font-size: .9rem; margin-top: .15rem; opacity: .85; }
+  .demo .line.current { color: var(--green); transform: scale(1); }
+  .demo .line.current .he { font-size: 1.6rem; }
+  .demo .line.done { color: var(--green); opacity: .7; }
+  h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -.035em; margin: 0 0 .5rem; }
+  .sub { color: var(--ink-2); font-size: 1.1rem; margin: 0; }
+  .card { background: var(--card); border-radius: 22px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  .card h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; margin: 0 0 .5rem; }
+  .card p { color: var(--ink-2); margin: .4rem 0; line-height: 1.5; }
+  .card ol { color: var(--ink-2); padding-left: 1.3rem; line-height: 1.6; margin: .6rem 0 0; }
+  .card ol b { color: var(--ink); font-weight: 500; }
+  .card ol a, .card a.pl { color: var(--green); text-decoration: none; font-weight: 500; }
+  .card ol a b { color: var(--green); }
+  .primary { display: inline-block; background: var(--green); color: #fff; border-radius: 999px; padding: .75rem 1.5rem; font-weight: 600; text-decoration: none; margin-top: 1rem; }
+  .primary:hover { filter: brightness(1.06); }
+  .ghost { display: inline-block; background: var(--green-soft); color: var(--green); border-radius: 999px; padding: .6rem 1.2rem; font-weight: 500; text-decoration: none; margin-top: 1rem; margin-right: .5rem; }
+  .small { font-size: .85rem; color: var(--ink-2); }
+  code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .85em; background: var(--green-soft); padding: .1rem .4rem; border-radius: 6px; }
+  footer { text-align: center; color: var(--dim); font-size: .8rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>Shiralong</h1>
+    <p class="sub">Hebrew lyrics with English translation, in sync with whatever you're playing on Spotify.</p>
+  </section>
+
+  <section class="card">
+    <h2>Use it in your browser</h2>
+    <p>Install the Shiralong extension for Chrome, Edge or Brave. It adds a lyrics panel next to the Spotify web player — nothing to sign up for.</p>
+    <ol>
+      <li><a href="https://chromewebstore.google.com/detail/jemjkeklebhobefimbopdaggafegfcba" target="_blank" rel="noopener"><b>Install the extension</b></a> from the Chrome Web Store.</li>
+      <li>In Chrome, open <a href="https://open.spotify.com/" target="_blank" rel="noopener"><b>open.spotify.com</b></a> and log in to Spotify as usual.</li>
+      <li>Play a song. The lyrics appear on the right; click the Shiralong icon to hide or show them.</li>
+    </ol>
+    <p>Looking for songs? Check out <a class="pl" href="https://open.spotify.com/playlist/64fD77g0fco7byoKIlgc2Z" target="_blank" rel="noopener">the Shiralong playlist</a> — all our songs, with lyrics and translations ready to go.</p>
+    <p class="small" style="margin-top:1.2rem">Works with Spotify in the Chrome browser on a computer, not the Spotify app or phones. Songs are added to the library over time; if one is missing, you'll see a note in the panel.</p>
+  </section>
+
+
+  <section class="demo" aria-hidden="true">
+    <div class="demo-head"><span class="demo-dot"></span><span class="demo-title">ליקוטי מוהר"ן</span><span class="demo-artist">Ben Zur</span></div>
+    <div class="demo-window"><div class="demo-track" id="demoTrack"></div></div>
+  </section>
+
+  <footer>Translations are reviewed by hand. Lyrics timing courtesy of LRCLIB. · <a href="mailto:hello@shiralong.com" style="color:inherit">hello@shiralong.com</a> · <a href="privacy.html" style="color:inherit">Privacy</a></footer>
+</main>
+<script>
+  (() => {
+    const lyrics = [[3.963, "וכל הלילה פה הבלאגן חגג", "And all night long, the madness raged here"], [14.476, "קראנו ליקוטי מוהרן על איזה גג", "We read Likutey Moharan up on some rooftop"], [16.88, "הייתי באורות נשבע לך בחיי", "I was on a high, I swear to you on my life"], [19.382, "את לא יודעת שמצאת חן בעייני", "You don't know you've found favor in my eyes"], [21.801, "לאט גרמת לי להבין שיש הבדל גדול", "Slowly, you made me see there's a world of difference"], [24.338, "בין אהבה לתאווה זה מסוכן ליפול", "Between love and lust—it’s dangerous to fall"], [26.917, "ויש דברים שאני כל כך מפחד לשאול", "And there are things I'm so afraid to ask"], [29.487, "אולי עדיף לא לדעת הכל", "Maybe it's better not to know everything"], [31.594, "בכל רחבי תבל חיפשתי רק אותך", "I searched the whole wide world for only you"], [36.941, "ושער הדמעות נפתח", "And the gate of tears opened"], [39.495, "עם הזמן את תלמדי אותי", "With time, you'll teach me"], [43.421, "אני כמוך ומכאן תשארי איתי", "I'm like you, and from now on, stay with me"], [48.243, "הנצח גדול", "Eternity is vast"], [50.314, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [54.301, "את כל השריטות", "All my scars"], [56.433, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"], [65.969, "אם נספר את הסיפור מהתחלה", "If we tell the story from the beginning"], [68.302, "באתי לחפש אמת לא תהילה", "I came looking for truth, not fame"], [70.638, "רחוק בגוף אבל קרוב בלב", "Far away in body, but close at heart"], [73.353, "היצרים רוצים להתקרב", "Our desires want to draw closer"], [75.603, "ואיך גרמת לי להבין", "And how you made me understand"], [77.133, "זה לא שחור לבן", "It isn't black and white"], [78.313, "אם תחפש רחוק תראה שיש שם אור קטן", "If you look far away, you'll see a little light there"], [80.768, "כשזה נכון אז זה מגיע בדיוק בזמן", "When it's right, it comes at exactly the right time"], [83.204, "חכה שיגיע סימן", "Wait for a sign to come"], [85.494, "חיבוק של נשמות אחר כך כל השאר", "An embrace of souls, and then everything else"], [90.513, "איתך העצב מאושר", "With you, even sadness is happy"], [93.458, "עם הזמן את תלמדי אותי", "With time, you'll teach me"], [97.289, "אני כמוך ומכאן תשארי איתי", "I'm like you, and from now on, stay with me"], [102.053, "הנצח גדול", "Eternity is vast"], [103.969, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [108.431, "את כל השריטות", "All my scars"], [110.504, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"], [115.485, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [136.499, "את כל השריטות", "All my scars"], [138.487, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"], [145.519, "עם הזמן את תלמדי אותי", "With time, you'll teach me"], [149.494, "אני כמוך ומכאן תשארי איתי", "I'm like you, and from now on, stay with me"], [154.188, "הנצח גדול", "Eternity is vast"], [156.175, "אם לא את אז מי תבין אותי", "If not you, then who will understand me"], [160.276, "את כל השריטות", "All my scars"], [162.812, "מאמי שימי יד נזרוק את הפחד מכל המדרגות", "Baby, take my hand—we'll throw fear down every flight of stairs"]];
+    const N = lyrics.length;
+    // Circular strip: [last] + all lines + [first, second], so three lines are always visible and the loop is seamless.
+    const strip = [lyrics[N - 1], ...lyrics, lyrics[0], lyrics[1]];
+    const track = document.getElementById('demoTrack');
+    track.innerHTML = strip.map(([, he, en]) => `<div class="line"><span class="he">${he}</span><span class="en">${en}</span></div>`).join('');
+    const els = [...track.children];
+    const rem = () => parseFloat(getComputedStyle(document.documentElement).fontSize);
+    let pos = 2;                                   // strip position of the current line (2 = the song's second line)
+    const paint = (animate = true) => {
+      track.style.transition = animate ? '' : 'none';
+      els.forEach((l, k) => { l.className = 'line' + (k < pos ? ' done' : k === pos ? ' current' : ''); });
+      track.style.transform = `translateY(${(1 - pos) * 4.5 * rem()}px)`;
+      if (!animate) void track.offsetHeight;        // flush so the next change animates again
+    };
+    paint(false);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const gapAfter = (k) => {                       // real timing from the library, with long instrumental gaps shortened
+      const cur = lyrics[k][0], next = k + 1 < N ? lyrics[k + 1][0] : cur + 3;
+      return Math.min(5, Math.max(1.2, next - cur)) * 1000;
+    };
+    const step = () => {
+      const k = pos - 1;                             // index into lyrics
+      setTimeout(() => {
+        pos++;
+        paint();
+        if (pos === N + 1) {                         // showing the copied first line: snap back to the real one
+          setTimeout(() => { pos = 1; paint(false); }, 650);
+        }
+        step();
+      }, gapAfter(k));
+    };
+    step();
+  })();
+</script>
+</body>
+</html>
